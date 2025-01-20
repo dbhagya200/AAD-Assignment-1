@@ -129,32 +129,10 @@
                                 <li><a href="blog-single.html">Hoka</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Kids <span class="fa fa-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog.html">Kids</a></li>
-                                <li><a href="blog.html">Women's Heel</a></li>
-                                <li><a href="blog-1.html">Women's Closed Shoes</a></li>
-                                <li><a href="blog-1.html">Women's Sports</a></li>
-                                <li><a href="blog-2.html">Women's Casual Shoes</a></li>
-                                <li><a href="blog-3.html">Women's Sndals</a></li>
-                                <li><a href="blog-single.html">Women's Flip Flops</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Brands <span class="fa fa-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog.html">Women's Heel</a></li>
-                                <li><a href="blog-1.html">Women's Closed Shoes</a></li>
-                                <li><a href="blog-1.html">Women's Sports</a></li>
-                                <li><a href="blog-2.html">Women's Casual Shoes</a></li>
-                                <li><a href="blog-3.html">Women's Sndals</a></li>
-                                <li><a href="blog-single.html">Women's Flip Flops</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="orders.jsp">Orders</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>
-                        <li class="iconitem"><a class="shopicon" href="shop-cart.html"><i class="fa fa-shopping-basket"></i> &nbsp;(0)</a></li>
+                        <li class="iconitem"><a class="shopicon" href="shop-cart.html"><i class="fa fa-shopping-basket"></i> Cart</a></li>
                     </ul>
                 </div>
             </nav><!-- end navbar -->

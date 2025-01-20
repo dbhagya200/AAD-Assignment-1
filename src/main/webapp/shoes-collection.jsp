@@ -169,7 +169,7 @@
                         <div class="image-gallery">
 
                             <div class="recipe-card">
-                                <img src="upload/avi/cricket-2.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/cricket-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Casual Lacing Shoes WHITE
                                     </h5>
@@ -185,7 +185,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/nike/soccer-3.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/soccer-3.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Alpha Menace 4 Elite "Travis Kelce"
 
@@ -202,7 +202,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/avi/training-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/training-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Men Casual Lacing Shoes WHITE
                                     </h5>
@@ -223,7 +223,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/avi/basket-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/basket-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Basketball Shoes BLACK
 
@@ -240,7 +240,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/nike/soccer-4.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/soccer-4.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Jordan 1 Low
 
@@ -257,7 +257,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/nike/spike-1.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/spike-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Maxfly 2
 
@@ -288,7 +288,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/avi/training-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/training-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Men Casual Lacing Shoes WHITE
                                     </h5>
@@ -304,7 +304,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/avi/trainin-2.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/training-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Unisex Shoes Sky Blue/Yellow
 
@@ -321,7 +321,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/adidas/training-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/adidas/training-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title"> Supernova Prima Running Shoes - SS25
 
@@ -342,7 +342,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/adidas/training-2.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/adidas/training-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">adidas Adizero Adios Pro 4 Running Shoes - SS25
 
@@ -359,7 +359,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/asics/trainig-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/asics/training-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Asics Gel-Nimbus 27 Running Shoes - SS25
 
@@ -376,7 +376,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/avi/training-5.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/asics/training-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Asics Novablast 5 Running Shoes - SS25
 
@@ -405,7 +405,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/avi/soccer-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/soccer-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Unisex Football Boot White/Gold
 
@@ -422,7 +422,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/avi/soccer-2.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/soccer-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI unisex soccer aqua blue/ink blue
 
@@ -439,7 +439,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/avi/soccer-3.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/soccer-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Vapor Edge Elite 360 2
 
@@ -460,7 +460,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/nike/soccar-1.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/soccer-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Vapor Edge 360 "Untouchable"
 
@@ -477,7 +477,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/nike/soccer-3.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/soccer-3.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Alpha Menace 4 Elite "Travis Kelce"
 
@@ -494,7 +494,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/nike/soccer-4.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/soccer-4.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Jordan 1 Low
 
@@ -524,7 +524,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/avi/basket-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/basket-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Basketball Shoes BLACK
 
@@ -541,7 +541,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/nike/basket-1.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/basket-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Basketball Shoes Tatum 3
 
@@ -558,7 +558,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/avi/basket-3.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/basket-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Basketball Low Cut Shoes Black/Purple
 
@@ -645,7 +645,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/nike/spike-1.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/spike-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Maxfly 2
 
@@ -662,7 +662,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/nike/spike-2.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/spike-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Zoom Rival
 
@@ -679,7 +679,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/nike/spike-3.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/spike-3.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Ja Fly 4
 
@@ -702,7 +702,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/avi/spike-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/spike-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Unisex Spike Shoes LI/Blue
 
@@ -719,7 +719,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/avi/spike-2.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/spike-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Unisex Spike Shoes Red/Yellow
 
@@ -736,7 +736,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/adidas/spike-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/adidas/spike-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">adidas Adipower Vector Spikes
 
@@ -766,7 +766,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/adidas/cricket-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/adidas/cricket-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">adidas Adizero Boost SL22 Cricket Spikes - AW24
 
@@ -783,7 +783,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/adidas/cricket-2.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/adidas/cricket-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">adidas Adipower Vector Cricket Spikes
 
@@ -800,7 +800,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/nike/cricket-1.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/cricket-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Zoom Rival
 
@@ -822,7 +822,7 @@
                     <section  class="recipes">
                         <div class="image-gallery">
                             <div class="recipe-card">
-                                <img src="upload/nike/cricket-2.png" class="card-img-top" alt="Product Image">
+                                <img src="upload/nike/cricket-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">Nike Rival Jump
 
@@ -839,7 +839,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/avi/cricket-1.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/cricket-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Casual Lacing Shoes LIME
 
@@ -856,7 +856,7 @@
                             </div>
 
                             <div class="recipe-card">
-                                <img src="upload/avi/cricket-2.jpg" class="card-img-top" alt="Product Image">
+                                <img src="upload/avi/cricket-2.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
                                     <h5 class="card-title">AVI Casual Lacing Shoes WHITE
                                     </h5>
