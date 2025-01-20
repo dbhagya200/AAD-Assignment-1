@@ -97,7 +97,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <div class="logo-normal">
-                        <a style="display: flex" class="navbar-brand" href="index.jsp"><img src="images/apple-touch-icon.png" alt=""><h2 style="color: white">EchoCart</h2></a>
+                        <a style="display: flex" class="navbar-brand" href="loginHome.jsp"><img src="images/apple-touch-icon.png" alt=""><h2 style="color: white">EchoCart</h2></a>
                     </div>
                 </div>
 
@@ -105,52 +105,34 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="loginHome.jsp">Home</a></li>
                         <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        <li class="dropdown hassubmenu">
+                            <a href="shoes-collection.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false"> Shoes-Collection-Categories
                                 <span class="fa fa-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#s-main"> Sports Shoes Collection </a></li>
-                                <li><a href="#training">Training Shoes</a></li>
-                                <li><a href="#soccer">Soccer Shoes</a></li>
-                                <li><a href="#basket">BasketBall Shoes</a></li>
-                                <li><a href="#spikes">Spikes Shoes</a></li>
-                                <li><a href="#cricket">Cricket Shoes</a></li>
+                                <li><a href="shoes-collection.jsp#s-main"> Sports Shoes Collection </a></li>
+                                <li><a href="shoes-collection.jsp#training">Training Shoes</a></li>
+                                <li><a href="shoes-collection.jsp#soccer">Soccer Shoes</a></li>
+                                <li><a href="shoes-collection.jsp#basket">BasketBall Shoes</a></li>
+                                <li><a href="shoes-collection.jsp#spikes">Spikes Shoes</a></li>
+                                <li><a href="shoes-collection.jsp#cricket">Cricket Shoes</a></li>
 
                             </ul>
                         </li>
                         <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            <a href="brands.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">Brands <span class="fa fa-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog.html">Nike</a></li>
-                                <li><a href="blog.html">Adidas</a></li>
-                                <li><a href="blog-1.html">Asics</a></li>
-                                <li><a href="blog-2.html">AVI</a></li>
-                                <li><a href="blog-single.html">Hoka</a></li>
+                                <li><a href="brands.jsp#nike">Nike</a></li>
+                                <li><a href="brands.jsp#adidas">Adidas</a></li>
+                                <li><a href="brands.jsp#asics">Asics</a></li>
+                                <li><a href="brands.jsp#avi">AVI</a></li>
+                                <li><a href="brands.jsp#hoka">Hoka</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Kids <span class="fa fa-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog.html">Kids</a></li>
-                                <li><a href="blog.html">Women's Heel</a></li>
-                                <li><a href="blog-1.html">Women's Sports</a></li>
-                                <li><a href="blog-2.html">Women's Casual Shoes</a></li>
-                                <li><a href="blog-single.html">Women's Flip Flops</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Brands <span class="fa fa-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog.html">Women's Heel</a></li>
-                                <li><a href="blog-1.html">Women's Sports</a></li>
-                                <li><a href="blog-2.html">Women's Casual Shoes</a></li>
-                                <li><a href="blog-single.html">Women's Flip Flops</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>
-                        <li class="iconitem"><a class="shopicon" href="shop-cart.html"><i class="fa fa-shopping-basket"></i> &nbsp;(0)</a></li>
+                        <li class="iconitem"><a class="shopicon" href="cart.jsp"><i class="fa fa-shopping-basket"></i> Cart</a></li>
+                        <li><a href="my-account.jsp">My Account</a></li>
+                        <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i>Search</a></li>
                     </ul>
                 </div>
             </nav><!-- end navbar -->

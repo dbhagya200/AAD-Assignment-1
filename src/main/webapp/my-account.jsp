@@ -1,47 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
   User: dilini
-  Date: 1/16/25
-  Time: 1:28 AM
+  Date: 1/21/25
+  Time: 12:10 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Dashboard</title>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
-
-    <!-- Custom & Default Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/loginHome.css">
+    <title>Oreder</title>
 </head>
 <body>
-<div id="preloader">
-    <img class="preloader" src="images/loader.gif" alt="">
-</div><!-- end loader -->
-<!-- END LOADER -->
-
-<%--<section class="content">--%>
-<%--    <video preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-14%20at%206.13.31%20PM.mp4"></video>--%>
-<%--</section>--%>
-
-
-
 <div id="wrapper">
     <!-- BEGIN # MODAL LOGIN -->
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
@@ -62,6 +31,7 @@
         </div>
     </div>
     <!-- END # MODAL LOGIN -->
+
 
     <header class="header">
         <div class="topbar clearfix">
@@ -138,76 +108,8 @@
         </div><!-- end container -->
     </header>
 
-    <section id="home" class="video-section js-height-full">
-        <video style="position: absolute; object-fit: cover; width: 100%; height: 100%;" preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-15%20at%2011.53.14%20PM.mp4"></video>
-        <div class="overlay"></div>
-        <div class="home-text-wrapper relative container" >
-
-            <div class="home-message" >
-
-    <section class="section gb" id="new-arrivals" style="padding: 0px;backface-visibility: hidden;overflow-x: hidden; background: unset" >
-
-        <section id="recipes" class="recipes" style="margin-top: 200px">
-
-            <div class="image-gallery">
-                <a href="" class="recipe-card">
-                    <img src="upload/nike-logo.jpeg" alt="" />
-                </a>
-                <a href="brands.jsp#adidas" class="recipe-card">
-                    <img
-                            src="upload/adidas%20logo.jpeg"
-                            alt="Easy Fruit Smoothie"
-                    />
-                </a>
-                <a href="brands.jsp#avi" class="recipe-card">
-                    <img
-                            src="upload/avi-logo.png"
-                            alt="Delicious Spaghetti"
-                    />
-                </a>
-
-            </div>
-        </section>
-
-        <section  class="recipes" style="margin-top: 20px">
-
-            <div class="image-gallery">
-                <a href="brands.jsp#asics" class="recipe-card" >
-                    <img src="upload/asics%20logo.jpeg" alt="" />
-                </a>
-                <a href="brands.jsp#hoka" class="recipe-card">
-                    <img
-                            src="upload/Hoka.jpeg"
-                            alt="Easy Fruit Smoothie"
-                    />
-                </a>
 
 
-            </div>
-        </section>
-
-
-     </section>
-
-
-
-            </div>
-        </div>
-
-
-    </section>
-
-
-
-
-
-
-</div><!-- end wrapper -->
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/animate.js"></script>
-    <script src="js/custom.js"></script>
+</div>
 </body>
 </html>

@@ -98,7 +98,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <div class="logo-normal">
-                        <a style="display: flex" class="navbar-brand" href="index.jsp"><img src="images/apple-touch-icon.png" alt=""><h2 style="color: white">EchoCart</h2></a>
+                        <a style="display: flex" class="navbar-brand" href="loginHome.jsp"><img src="images/apple-touch-icon.png" alt=""><h2 style="color: white">EchoCart</h2></a>
                     </div>
                 </div>
 
@@ -106,53 +106,34 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="loginHome.jsp">Home</a></li>
                         <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">For Mens <span class="fa fa-angle-down"></span></a>
+                        <li class="dropdown hassubmenu">
+                            <a href="shoes-collection.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false"> Shoes-Collection-Categories
+                                <span class="fa fa-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="shoes-collection.jsp#men-main">Men </a></li>
-                                <li><a href="shoes-collection.jsp#formal-shoes">Formal Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#sports-shoes">Men's Sports</a></li>
-                                <li><a href="shoes-collection.jsp#casual-shoes">Men's Casual Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#flip">Men's Flip Flops</a></li>
+                                <li><a href="shoes-collection.jsp#s-main"> Sports Shoes Collection </a></li>
+                                <li><a href="shoes-collection.jsp#training">Training Shoes</a></li>
+                                <li><a href="shoes-collection.jsp#soccer">Soccer Shoes</a></li>
+                                <li><a href="shoes-collection.jsp#basket">BasketBall Shoes</a></li>
+                                <li><a href="shoes-collection.jsp#spikes">Spikes Shoes</a></li>
+                                <li><a href="shoes-collection.jsp#cricket">Cricket Shoes</a></li>
+
                             </ul>
                         </li>
                         <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">For Womens <span class="fa fa-angle-down"></span></a>
+                            <a href="brands.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">Brands <span class="fa fa-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog.html">Women</a></li>
-                                <li><a href="blog.html">Women's Heel</a></li>
-                                <li><a href="blog-1.html">Women's Closed Shoes</a></li>
-                                <li><a href="blog-1.html">Women's Sports</a></li>
-                                <li><a href="blog-2.html">Women's Casual Shoes</a></li>
-                                <li><a href="blog-3.html">Women's Sndals</a></li>
-                                <li><a href="blog-single.html">Women's Flip Flops</a></li>
+                                <li><a href="brands.jsp#nike">Nike</a></li>
+                                <li><a href="brands.jsp#adidas">Adidas</a></li>
+                                <li><a href="brands.jsp#asics">Asics</a></li>
+                                <li><a href="brands.jsp#avi">AVI</a></li>
+                                <li><a href="brands.jsp#hoka">Hoka</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Kids <span class="fa fa-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog.html">Kids</a></li>
-                                <li><a href="blog.html">Women's Heel</a></li>
-                                <li><a href="blog-1.html">Women's Closed Shoes</a></li>
-                                <li><a href="blog-1.html">Women's Sports</a></li>
-                                <li><a href="blog-2.html">Women's Casual Shoes</a></li>
-                                <li><a href="blog-3.html">Women's Sndals</a></li>
-                                <li><a href="blog-single.html">Women's Flip Flops</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown hassubmenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Brands <span class="fa fa-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog.html">Women's Heel</a></li>
-                                <li><a href="blog-1.html">Women's Closed Shoes</a></li>
-                                <li><a href="blog-1.html">Women's Sports</a></li>
-                                <li><a href="blog-2.html">Women's Casual Shoes</a></li>
-                                <li><a href="blog-3.html">Women's Sndals</a></li>
-                                <li><a href="blog-single.html">Women's Flip Flops</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>
-                        <li class="iconitem"><a class="shopicon" href="shop-cart.html"><i class="fa fa-shopping-basket"></i> &nbsp;(0)</a></li>
+                        <li class="iconitem"><a class="shopicon" href="cart.jsp"><i class="fa fa-shopping-basket"></i> Cart</a></li>
+                        <li><a href="my-account.jsp">My Account</a></li>
+                        <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i>Search</a></li>
                     </ul>
                 </div>
             </nav><!-- end navbar -->
@@ -161,66 +142,670 @@
 
     <section id="home" class="video-section js-height-full" style="background-color: #2c2f33">
 
-
         <div class="home-text-wrapper relative container" >
-
             <div class="home-message"  >
 
-                <section class="section gb main-c " id="men-main"  style="padding: 0px;backface-visibility: hidden;overflow-x: hidden; background: unset" >
+                <section class="section gb main-c " id="nike"  style="padding: 0px;backface-visibility: hidden;overflow-x: hidden; background: unset" >
                     <h1 style="color: white;text-align: start;margin-left: 20px;
-                    margin-top: 200px">Men's Collection</h1>
+                    margin-top: 200px">Nike Shoes Collection</h1>
                     <section  class="recipes">
-
                         <div class="image-gallery">
-                            <a href=".jsp" class="recipe-card">
-                                <img src="upload/m-formal-1.jpg" alt="" />
+                            <div class="recipe-card">
+                                <img src="upload/nike/soccer-1.jpeg" class="card-img-top" alt="Product Image">
                                 <div class="description">
-                                    <p style="text-align: start">
-                                        Mens Black Formal<br>
-                                        shoes - ALBIE-SLIP<br>
-                                    <hr>
-                                    Rs.3,999.00
-                                    </p>
+                                    <h5 class="card-title">Nike Vapor Edge Elite 360 2
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price: LKR25,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
                                 </div>
-                            </a>
-                            <a href=".jsp" class="recipe-card">
-                                <img src="upload/m-casual-1.jpg" alt="" />
-                                <div class="description">
-                                    <p style="text-align: start">
-                                        North Star white high-top <br>
-                                        sneaker – Pulsar<br>
-                                    <hr>
-                                    Rs.3,499.00
-                                    </p>
-                                </div>
-                            </a>
-                            <a href=".jsp" class="recipe-card">
-                                <img src="upload/m-sport-1.jpg" alt="" />
-                                <div class="description">
-                                    <p style="text-align: start">
-                                        Mens Ash Sports<br>
-                                        shoes - MIKI<br>
-                                    <hr>
-                                    Rs.6,999.00
-                                    </p>
-                                </div>
-                            </a>
-                            <a href=".jsp" class="recipe-card">
-                                <img src="upload/m-flip-1.jpg" alt="" />
-                                <div class="description">
-                                    <p style="text-align: start">
-                                        Mens Grey two tone <br>
-                                        Flip Flop – MANTIS <br>
-                                    <hr>
-                                    Rs.1,099.00
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="input-group input-group-sm mb-3">
-                                <span class="input-group-text" >Quantity</span>
-                                <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="1">
-                                <button class="btn btn-success">Add to Cart</button>
                             </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/nike/soccer-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Nike Vapor Edge 360 "Untouchable"
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price: LKR47,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/nike/soccer-3.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Nike Alpha Menace 4 Elite "Travis Kelce"
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price: LKR57,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+                            <div class="recipe-card">
+                                <img src="upload/nike/soccer-4.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Jordan 1 Low
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price: LKR18,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/nike/basket-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Nike Basketball Shoes Tatum 3
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price: LKR16,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/nike/basket-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Nike LeBron NXXT Gen AMPD Basketball Shoes
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price:  LKR35,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+                            <div class="recipe-card">
+                                <img src="upload/nike/spike-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Nike Maxfly 2
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price: LKR58,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/nike/spike-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Nike Zoom Rival
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price: LKR50,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/nike/spike-3.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Nike Ja Fly 4
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price:  LKR45,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+                            <div class="recipe-card">
+                                <img src="upload/nike/cricket-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Nike Zoom Rival
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price:  LKR22,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/nike/cricket-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Nike Rival Jump
+
+                                    </h5>
+                                    <p class="card-text">Product: NIKE</p>
+                                    <p class="card-text">Price: LKR22,299.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </section>
+
+
+                </section>
+
+
+                <section class="section gb main-c " id="adidas"  style="padding: 0px;backface-visibility: hidden;overflow-x: hidden; background: unset" >
+                    <h1 style="color: white;text-align: start;margin-left: 20px;
+                    margin-top: 200px">Adidas Shoes Collection</h1>
+                    <section  class="recipes">
+                        <div class="image-gallery">
+                            <div class="recipe-card">
+                                <img src="upload/adidas/training-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title"> Supernova Prima Running Shoes - SS25
+
+                                    </h5>
+                                    <p class="card-text">Product: ADIDAS </p>
+                                    <p class="card-text">Price: LKR10,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/adidas/training-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">adidas Adizero Adios Pro 4 Running Shoes - SS25
+
+                                    </h5>
+                                    <p class="card-text">Product: ADIDAS</p>
+                                    <p class="card-text">Price: LKR42,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/adidas/basket-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">adidas Anthony Edwards 1 Low Basketball Shoes
+
+                                    </h5>
+                                    <p class="card-text">Product: ADIDAS</p>
+                                    <p class="card-text">Price: LKR53,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+
+                            <div class="recipe-card">
+                                <img src="upload/adidas/basket-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title"> adidas Originals Crazy Iiinfinity Basketball Shoes
+
+                                    </h5>
+                                    <p class="card-text">Product: ADIDAS</p>
+                                    <p class="card-text">Price: LKR48,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/adidas/spike-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">adidas Adipower Vector Spikes
+
+                                    </h5>
+                                    <p class="card-text">Product: ADIDAS</p>
+                                    <p class="card-text">Price:  LKR35,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/adidas/cricket-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">adidas Adizero Boost SL22 Cricket Spikes - AW24
+
+                                    </h5>
+                                    <p class="card-text">Product: ADIDAS</p>
+                                    <p class="card-text">Price: LKR18,299.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+                            <div class="recipe-card">
+                                <img src="upload/adidas/cricket-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">adidas Adipower Vector Cricket Spikes
+
+                                    </h5>
+                                    <p class="card-text">Product: ADIDAS</p>
+                                    <p class="card-text">Price: LKR15,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                    </section>
+
+
+                </section>
+
+
+                <section class="section gb main-c " id="asics"  style="padding: 0px;backface-visibility: hidden;overflow-x: hidden; background: unset" >
+                    <h1 style="color: white;text-align: start;margin-left: 20px;
+                    margin-top: 200px">Asics Shoes Collection</h1>
+                    <section  class="recipes">
+                        <div class="image-gallery">
+                            <div class="recipe-card">
+                                <img src="upload/asics/training-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Asics Gel-Nimbus 27 Running Shoes - SS25
+
+                                    </h5>
+                                    <p class="card-text">Product: ASICS</p>
+                                    <p class="card-text">Price: LKR23,050.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/asics/training-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">Asics Novablast 5 Running Shoes - SS25
+
+                                    </h5>
+                                    <p class="card-text">Product: ASICS</p>
+                                    <p class="card-text">Price: LKR25,050.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+
+
+
+
+
+                        </div>
+                    </section>
+
+
+                </section>
+
+                <section class="section gb main-c " id="avi"  style="padding: 0px;backface-visibility: hidden;overflow-x: hidden; background: unset" >
+                    <h1 style="color: white;text-align: start;margin-left: 20px;
+                    margin-top: 200px">Avi Shoes Collection</h1>
+                    <section  class="recipes">
+                        <div class="image-gallery">
+                            <div class="recipe-card">
+                                <img src="upload/avi/training-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI Men Casual Lacing Shoes WHITE
+                                    </h5>
+                                    <p class="card-text">Product: AVI</p>
+                                    <p class="card-text">LKR10,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/avi/training-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI Unisex Shoes Sky Blue/Yellow
+
+                                    </h5>
+                                    <p class="card-text">Product: AVI</p>
+                                    <p class="card-text">Price: LKR8,749.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/avi/soccer-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI Unisex Football Boot White/Gold
+
+                                    </h5>
+                                    <p class="card-text">Product: AVI</p>
+                                    <p class="card-text">Price: LKR2,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+
+                            <div class="recipe-card">
+                                <img src="upload/avi/soccer-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI unisex soccer aqua blue/ink blue
+
+                                    </h5>
+                                    <p class="card-text">Product: AVI</p>
+                                    <p class="card-text">Price: LKR6,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/avi/basket-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI Basketball Shoes BLACK
+
+                                    </h5>
+                                    <p class="card-text">Product: AVI</p>
+                                    <p class="card-text">Price: LKR10,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/avi/basket-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI Basketball Low Cut Shoes Black/Purple
+
+                                    </h5>
+                                    <p class="card-text">Product: AVI</p>
+                                    <p class="card-text">Price:  LKR15,999.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+                            <div class="recipe-card">
+                                <img src="upload/avi/spike-1.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI Unisex Spike Shoes LI/Blue
+
+                                    </h5>
+                                    <p class="card-text">Product: AVI</p>
+                                    <p class="card-text">Price: LKR3,299.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/avi/spike-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI Unisex Spike Shoes Red/Yellow
+
+                                    </h5>
+                                    <p class="card-text">Product: AVI</p>
+                                    <p class="card-text">Price: LKR10,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-card">
+                                <img src="upload/avi/cricket-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI Casual Lacing Shoes LIME
+
+                                    </h5>
+                                    <p class="card-text">Product: AVI</p>
+                                    <p class="card-text">Price: LKR15,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+                            <div class="recipe-card">
+                                <img src="upload/avi/cricket-2.jpeg" class="card-img-top" alt="Product Image">
+                                <div class="description">
+                                    <h5 class="card-title">AVI Casual Lacing Shoes WHITE
+                                    </h5>
+                                    <p class="card-text">Product: ADIDAS</p>
+                                    <p class="card-text">Price:  LKR15,499.00</p>
+                                    <div class="input-group input-group-sm mb-3" style="float: unset">
+                                        <span class="input-group-text" style="color:darkslategrey" >Quantity</span>
+                                        <input type="number" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm" value="1" style="width: 60%;margin-left: 10px">
+                                        <button class="btn btn-success" style="margin: 10px; border-radius: 5px;">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </section>
+
+
+                </section>
+
+                <section class="section gb main-c " id="hoka"  style="padding: 0px;backface-visibility: hidden;overflow-x: hidden; background: unset" >
+                    <h1 style="color: white;text-align: start;margin-left: 20px;
+                    margin-top: 200px">Nike Shoes Collection</h1>
+                    <section  class="recipes">
+                        <div class="image-gallery">
+
+
+
+
+
+                        </div>
+                    </section>
+
+                    <section  class="recipes">
+                        <div class="image-gallery">
+
+
+
+
+
                         </div>
                     </section>
 
@@ -233,12 +818,9 @@
 
 
 
+
             </div>
         </div>
-
-
-
-
 
 
 
