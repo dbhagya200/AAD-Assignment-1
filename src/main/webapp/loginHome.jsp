@@ -96,7 +96,8 @@
                         <span class="icon-bar"></span>
                     </button>
                     <div class="logo-normal">
-                        <a style="display: flex" class="navbar-brand" href="loginHome.jsp"><img src="images/apple-touch-icon.png" alt=""><h2 style="color: white">EchoCart</h2></a>
+                        <a style="display: flex" class="navbar-brand" href="loginHome.jsp">
+                            <img src="images/apple-touch-icon.png" alt=""><h2 style="color: white">EchoCart</h2></a>
                     </div>
                 </div>
 

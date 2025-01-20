@@ -1,0 +1,16 @@
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+
+.form-inline{
+    display: flex;
+}
+.navbar{
+    padding: 10px 20px;
+}
+.nav-item{
+    margin: 0 10px;
+}
+.nav-link{
+    color: white;
+}
