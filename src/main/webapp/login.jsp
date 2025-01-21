@@ -124,7 +124,7 @@
                     <div class="col-md-6 col-md-offset-3">
                         <div class="login-container">
                             <h2>Login to Your Account</h2>
-                            <form action="" method="post">
+                            <form action="login" method="get">
                                 <div class="form-group">
                                     <label for="username">Username:</label>
                                     <input type="text" id="username" name="username" required>
