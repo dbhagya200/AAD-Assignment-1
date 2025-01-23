@@ -151,7 +151,7 @@
         <section id="recipes" class="recipes" style="margin-top: 200px">
 
             <div class="image-gallery">
-                <a href="" class="recipe-card">
+                <a href="brands.jsp#nike" class="recipe-card">
                     <img src="upload/nike-logo.jpeg" alt="" />
                 </a>
                 <a href="brands.jsp#adidas" class="recipe-card">

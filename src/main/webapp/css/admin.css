@@ -1,3 +1,15 @@
+body{
+    background-color: #000000;
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        opacity: 0.4;
+        z-index: -1;
+    }
+}
+
 .navbar-expand-lg .navbar-collapse {
     justify-content: flex-end;
 }
@@ -6,11 +18,124 @@
     display: flex;
 }
 .navbar{
-    padding: 10px 20px;
+    padding: 5px 20px;
+}
+.nabar-brand a img{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+
 }
 .nav-item{
     margin: 0 10px;
 }
 .nav-link{
     color: white;
+}
+.container{
+
+    margin-top: 20px;
+
+    h2{
+        text-align: center;
+        font-family:'Times New Roman', Times, serif;
+        font-weight:600;
+        color: #ffffff;
+        font-size: 40px;
+
+    }
+    h4{
+        color: #ffffff;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+
+    }
+
+
+}
+.table th{
+    background-color:teal;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.topbar {
+    background-color: #000;
+
+}
+
+.topbar a,
+.topbar p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+}
+
+.topbar .text-left p {
+    margin-top: 3px;
+}
+
+.topbar .text-left i {
+    padding-right: 3px;
+}
+.header {
+    position: absolute;
+    z-index: 111;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 0;
+    background-color: transparent;
+    text-decoration: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.social a {
+    font-size: 12px;
+    color: #fff !important;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 25px;
+    text-align: center;
+    border-radius: 1px;
+    margin-left: 2px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.social a:hover {
+    opacity: 0.8;
+}
+.h-container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 10px;
+}
+.row-fluid {
+    display: flex;
+    justify-content: space-evenly;
+}
+.social a.facebook {
+    background-color: #3b5998;
+}
+
+.social a.pinterest {
+    background-color: #bd081c;
+}
+
+.social a.twitter {
+    background-color: #1da1f2;
+}
+
+.social a.google {
+    background-color: #34a853;
+}
+
+.social a.linkedin {
+    background-color: #0077b5;
 }
