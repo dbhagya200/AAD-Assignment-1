@@ -61,16 +61,16 @@
                     <a class="nav-link" href="adminHome.jsp">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-users.jsp">Users</a>
+                    <a class="nav-link" href="a_users.jsp">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="a-products.jsp">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-categories.jsp">Categories</a>
+                    <a class="nav-link" href="a_categories.jsp">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-orders.jsp">Orders</a>
+                    <a class="nav-link" href="a_orders.jsp">Orders</a>
                 </li>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">
@@ -102,7 +102,7 @@
         </button>
     </div>
 
-    <!-- Add Customer Modal -->
+    <!-- Add Admin Modal -->
     <div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -136,35 +136,42 @@
         </div>
     </div>
 
-    <!-- Update Customer Modal -->
-    <div class="modal fade" id="updatecustomerModal" tabindex="-1" aria-labelledby="updatecustomerModalLabel"
-         aria-hidden="true">
+    <!-- Update admin Modal -->
+    <div class="modal fade" id="editAdminModal" tabindex="-1" aria-labelledby="editAdminModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="container m-2">
-                    <form id="updateCustomerForm">
-                        <div class="mb-3 text-center">
-                            <label for="username" class="form-label fs-4 fw-bold ">Update admin Form</label>
-                        </div>
-<%--                        <div class="mb-3">--%>
-<%--                            <label for="updated_customer_id" class="form-label">Customer Id</label>--%>
-<%--                            <input type="text" class="form-control" id="updated_customer_id" readonly>--%>
-<%--                        </div>--%>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editAdminModalLabel">Edit Admin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editAdminForm">
                         <div class="mb-3">
-                            <label for="updated_name" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="updated_name">
+                            <label for="editUsername" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="editUsername" name="username" readonly>
                         </div>
                         <div class="mb-3">
-                            <label for="updated_email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="updated_email">
+                            <label for="editEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editEmail" name="email" required>
                         </div>
-                        <button id="btn_update" type="button" class="btn btn-primary">Update</button>
-                        <button id="btn_upcancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <div class="mb-3">
+                            <label for="editPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="editPassword" name="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editconfirm" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="editconfirm" name="confirm" required>
+                        </div>
                     </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="updateAdmin()">Save Changes</button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Customer Table -->
     <table class="table table-bordered">
@@ -185,77 +192,82 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    $.ajax({
-        url: "admin",
-        method: "GET",
-        success: function (response) {
-            // Parse the JSON response if needed
-            const admin = typeof response === "string" ? JSON.parse(response) : response;
-            const tableBody = document.getElementById("customer_table_body");
+    fetchAdmins();
+    function fetchAdmins() {
+        $.ajax({
+            url: "admin",
+            method: "GET",
+            success: function (response) {
+                // Parse the JSON response if needed
+                const admin = typeof response === "string" ? JSON.parse(response) : response;
+                const tableBody = document.getElementById("customer_table_body");
 
-            // Clear the table body before appending new rows
-            tableBody.innerHTML = "";
+                // Clear the table body before appending new rows
+                tableBody.innerHTML = "";
 
-            // Iterate over users array and create rows for each user
-            admin.forEach(function(admin) {
-                // Create a new row
-                const newRow = tableBody.insertRow();
+                // Iterate over users array and create rows for each user
+                admin.forEach(function(admin) {
+                    // Create a new row
+                    const newRow = tableBody.insertRow();
 
-                // Insert cells into the new row
-                const usernameCell = newRow.insertCell(0); // Username cell
-                const emailCell = newRow.insertCell(1);    // Email cell
-                const actionCell = newRow.insertCell(2);   // Action cell
+                    // Insert cells into the new row
+                    const usernameCell = newRow.insertCell(0); // Username cell
+                    const emailCell = newRow.insertCell(1);    // Email cell
+                    const actionCell = newRow.insertCell(2);   // Action cell
 
-                // Add data to the username and email cells
-                usernameCell.textContent = admin.username;
-                emailCell.textContent = admin.email;
+                    // Add data to the username and email cells
+                    usernameCell.textContent = admin.username;
+                    emailCell.textContent = admin.email;
 
-                // Create edit and delete icons
-                const editIcon = document.createElement("i");
-                editIcon.className = "fas fa-pencil-alt"; // FontAwesome class for pencil icon
-                editIcon.style.color = "teal";
-                editIcon.style.cursor = "pointer";
-                editIcon.title = "Edit admin";
-                editIcon.addEventListener("click", () => {
-                    alert(`Edit user: ${admin.username}`);
-                    // Add your edit logic here
+                    // Create edit and delete icons
+                    const editIcon = document.createElement("i");
+                    editIcon.className = "fas fa-pencil-alt"; // FontAwesome class for pencil icon
+                    editIcon.style.color = "teal";
+                    editIcon.style.cursor = "pointer";
+                    editIcon.title = "Edit admin";
+                    editIcon.addEventListener("click", () => {
+                        alert(`Edit user: ${admin.username}`);
+                        // Add your edit logic here
+                        openEditModal();
+                        updateAdmin(admin.username);
+                    });
+
+                    const deleteIcon = document.createElement("i");
+                    deleteIcon.className = "fas fa-trash-alt"; // FontAwesome class for trash icon
+                    deleteIcon.style.color = "red";
+                    deleteIcon.style.cursor = "pointer";
+                    deleteIcon.title = "Delete User";
+                    deleteIcon.addEventListener("click", () => {
+                        if (confirm(`Are you sure you want to delete admin: ${admin.username}?`)) {
+                            deleteAdmin(admin.username); // Call delete function
+
+                        }
+                    });
+
+                    // Append icons to the action cell
+                    actionCell.appendChild(editIcon);
+                    actionCell.appendChild(document.createTextNode(" ")); // Add spacing
+                    actionCell.appendChild(deleteIcon);
                 });
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching users:", error);
+            }
+        });
+    }
 
-                const deleteIcon = document.createElement("i");
-                deleteIcon.className = "fas fa-trash-alt"; // FontAwesome class for trash icon
-                deleteIcon.style.color = "red";
-                deleteIcon.style.cursor = "pointer";
-                deleteIcon.title = "Delete User";
-                deleteIcon.addEventListener("click", () => {
-                    if (confirm(`Are you sure you want to delete admin: ${admin.username}?`)) {
-                        deleteAdmin(admin.username); // Call delete function
-                    }
-                });
-
-                // Append icons to the action cell
-                actionCell.appendChild(editIcon);
-                actionCell.appendChild(document.createTextNode(" ")); // Add spacing
-                actionCell.appendChild(deleteIcon);
-            });
-        },
-        error: function (xhr, status, error) {
-            console.error("Error fetching users:", error);
-        }
-    });
 
     function deleteAdmin(username) {
         if (!username) {
             alert("Username is required.");
             return;
         }
-
         $.ajax({
-            url: "/delete-admin", // URL of the DeleteAdminServlet
-            method: "POST",
-            data: { username: username }, // Send the username in the request
+            url: "/E_Commerce_Project_New_war_exploded/admin?username=" + encodeURIComponent(username),
+            method: "DELETE",
             success: function (response) {
-                alert(response); // Show the success message
-                location.reload(); // Reload the page or update the UI
+                alert(response);
+                fetchAdmins();
             },
             error: function (xhr, status, error) {
                 console.error("Error deleting admin:", error);
@@ -263,6 +275,43 @@
             }
         });
     }
+
+    function openEditModal(username) {
+        $('#editUsername').val(username);
+        $('#editEmail').val();
+        $('#editPassword').val('');
+        $('#editAdminModal').modal('show');
+    }
+
+    // Function to update admin
+    function updateAdmin(username) {
+     $('#editUsername').val(username);
+        const email = $('#editEmail').val();
+        const password = $('#editPassword').val();
+        const confirmPassword = $('#editconfirm').val();
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
+
+        $.ajax({
+            url: "/E_Commerce_Project_New_war_exploded/admin?username=" + encodeURIComponent(username),
+            method: "PUT",
+            data: { username, email, password },
+            success: function (response) {
+                alert("Admin updated successfully!");
+                $('#editAdminModal').modal('hide');
+                fetchAdmins();
+            },
+            error: function (xhr, status, error) {
+                console.error("Error updating admin:", error);
+                alert("Failed to update admin.");
+            }
+        });
+    }
+
+
 
 </script>
 </body>

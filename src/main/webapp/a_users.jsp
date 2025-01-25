@@ -63,16 +63,16 @@
                     <a class="nav-link" href="adminHome.jsp">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-users.jsp">Users</a>
+                    <a class="nav-link" href="a_users.jsp">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="a-products.jsp">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-categories.jsp">Categories</a>
+                    <a class="nav-link" href="a_categories.jsp">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-orders.jsp">Orders</a>
+                    <a class="nav-link" href="a_orders.jsp">Orders</a>
                 </li>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">

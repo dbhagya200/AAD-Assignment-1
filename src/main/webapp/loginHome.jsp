@@ -105,23 +105,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="loginHome.jsp">Home</a></li>
                         <li class="dropdown hassubmenu">
-                        <li class="dropdown hassubmenu">
-                            <a href="shoes-collection.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-expanded="false"> Shoes-Collection-Categories
-                                <span class="fa fa-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="shoes-collection.jsp#s-main"> Sports Shoes Collection </a></li>
-                                <li><a href="shoes-collection.jsp#training">Training Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#soccer">Soccer Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#basket">BasketBall Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#spikes">Spikes Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#cricket">Cricket Shoes</a></li>
-
-                            </ul>
-                        </li>
-                        <li class="dropdown hassubmenu">
                             <a href="brands.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-expanded="false">Brands <span class="fa fa-angle-down"></span></a>
+                               aria-expanded="false">Products <span class="fa fa-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="brands.jsp#nike">Nike</a></li>
                                 <li><a href="brands.jsp#adidas">Adidas</a></li>
@@ -131,7 +116,14 @@
                             </ul>
                         </li>
                         <li class="iconitem"><a class="shopicon" href="cart.jsp"><i class="fa fa-shopping-basket"></i> Cart</a></li>
-                        <li><a href="my-account.jsp">My Account</a></li>
+                        <li class="dropdown hassubmenu">
+                            <a href="my_account.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">My Account <span class="fa fa-angle-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="">Profile</a></li>
+                                <li><a href="">Logout</a></li>
+                            </ul>
+                        </li>
                         <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i>Search</a></li>
                     </ul>
                 </div>

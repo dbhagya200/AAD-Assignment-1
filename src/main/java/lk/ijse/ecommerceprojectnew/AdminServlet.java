@@ -7,7 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lk.ijse.ecommerceprojectnew.dto.AdminDTO;
+import lk.ijse.ecommerceprojectnew.model.Admin;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class AdminServlet extends HttpServlet {
     @Resource(name = "java:comp/env/jdbc/pool")
     private DataSource dataSource;
 
-    List<AdminDTO> adminList = new ArrayList<>();
+    List<Admin> adminList = new ArrayList<>();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("username");
@@ -42,21 +42,14 @@ public class AdminServlet extends HttpServlet {
             preparedStatement.setString(3, password);
 
 
-//            if (preparedStatement.executeUpdate() > 0) {
-//                resp.sendRedirect("adminHome.jsp?message=Registration+Successful"); // Use URL encoding for '+'
-//                System.out.println("Registration Successful");
-//            } else {
-//                resp.sendRedirect("adminHome.jsp?error=Registration+Failed"); // Use URL encoding for '+'
-//            }
-
             if (preparedStatement.executeUpdate() > 0) {
-                resp.sendRedirect("adminHome.jsp?status=success"); // Notify success
+                resp.sendRedirect("adminHome.jsp");
             } else {
-                resp.sendRedirect("adminHome.jsp?status=failure"); // Notify failure
+                resp.sendRedirect("adminHome.jsp");
             }
 
         } catch (SQLException e) {
-            resp.sendRedirect("adminHome.jsp?error=Registration+Failed"+e.getMessage()); // Use URL encoding for '+'
+            resp.sendRedirect("adminHome.jsp?error=Registration+Failed"+e.getMessage());
             e.printStackTrace();
         }
     }
@@ -70,11 +63,11 @@ public class AdminServlet extends HttpServlet {
             PreparedStatement prsm = connection.prepareStatement(sql);
             ResultSet result = prsm.executeQuery();
             while (result.next()) {
-                AdminDTO adminDTO = new AdminDTO(
+                Admin admin = new Admin(
                         result.getString(1),
                         result.getString(2)
                 );
-                adminList.add(adminDTO);
+                adminList.add(admin);
 
             }
             Gson gson = new Gson();
@@ -87,5 +80,73 @@ public class AdminServlet extends HttpServlet {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("delete admin servlet");
+
+        String username = req.getParameter("username");
+        System.out.println("Username received for deletion: " + username);
+
+        if (username == null || username.trim().isEmpty()) {
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            resp.getWriter().write("Invalid or missing 'username' parameter.");
+            return;
+        }
+
+        try (Connection connection = dataSource.getConnection()) {
+            String sql = "DELETE FROM admin WHERE username = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, username);
+
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                resp.setStatus(HttpServletResponse.SC_OK);
+                resp.getWriter().write("Admin deleted successfully.");
+            } else {
+                resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                resp.getWriter().write("Admin not found.");
+            }
+        } catch (SQLException e) {
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            resp.getWriter().write("Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String username = req.getParameter("username");
+        String email = req.getParameter("email");
+        String password = req.getParameter("password");
+
+        System.out.println("Updating Admin: username=" + username + ", email=" + email);
+
+        try (Connection connection = dataSource.getConnection()) {
+
+            String updateQuery = "UPDATE admin SET email = ?, password = ? WHERE username = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(updateQuery)) {
+                preparedStatement.setString(1, email);
+                preparedStatement.setString(2, password);
+                preparedStatement.setString(3, username);
+
+                int rowsUpdated = preparedStatement.executeUpdate();
+
+                if (rowsUpdated > 0) {
+                    resp.setStatus(HttpServletResponse.SC_OK);
+                    resp.getWriter().write("Admin updated successfully.");
+                } else {
+                    resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                    resp.getWriter().write("Admin not found.");
+                }
+            }
+        } catch (SQLException e) {
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            resp.getWriter().write("Error while updating admin: " + e.getMessage());
+            e.printStackTrace();
+        }
+
     }
 }

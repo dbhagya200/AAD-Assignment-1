@@ -1,4 +1,5 @@
-<%--
+<%@ page import="lk.ijse.ecommerceprojectnew.model.Product" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: dilini
   Date: 1/18/25
@@ -61,16 +62,16 @@
                     <a class="nav-link" href="adminHome.jsp">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-users.jsp">Users</a>
+                    <a class="nav-link" href="a_users.jsp">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="a-products.jsp">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-categories.jsp">Categories</a>
+                    <a class="nav-link" href="a_categories.jsp">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-orders.jsp">Orders</a>
+                    <a class="nav-link" href="a_orders.jsp">Orders</a>
                 </li>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">
@@ -88,7 +89,7 @@
 
 
 
-    <h2 class="mb-3">Admin Details</h2>
+
 <%--    <div class="input-group ">--%>
 <%--        <input type="text" class="form-control" placeholder="Search by name" id="search-bar">--%>
 <%--        <button class="btn btn-primary" type="button">Search</button>--%>
@@ -105,7 +106,8 @@
     <!-- Product Modal -->
 
 <div class="container mt-5">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">
+    <h2 class="mb-3">Product Details</h2>
+    <button style="font-family: 'Droid Serif', sans-serif;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">
         Add Product
     </button>
 
@@ -113,26 +115,30 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="productModalLabel">Add New Product</h5>
+                    <h5 style="font-family: 'Times New Roman', Times, serif;" class="modal-title" id="productModalLabel">Add New Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form id="productForm" enctype="multipart/form-data" action="products" method="post">
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="productName" class="form-label">Product Name</label>
-                            <input type="text" class="form-control" id="productName" name="name" required>
+                            <label  for="productName" class="form-label">Product Name:</label>
+                            <input type="text" class="form-control" id="productName" name="product_name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="productDescription" class="form-label">Description</label>
+                            <label for="productDescription" class="form-label">Description:</label>
                             <textarea class="form-control" id="productDescription" name="description" rows="3"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="productPrice" class="form-label">Price</label>
+                            <label for="productPrice" class="form-label">Price:</label>
                             <input type="number" class="form-control" id="productPrice" name="price" required>
                         </div>
                         <div class="mb-3">
-                            <label for="productImage" class="form-label">Upload Image</label>
-                            <input type="file" class="form-control" id="productImage" name="image" accept="image/*" required>
+                            <label for="quentity" class="form-label">Quntity:</label>
+                            <input type="number" class="form-control" id="quentity" name="stock_quentity" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="imageUrl" class="form-label">Upload Image:</label>
+                            <input type="file" class="form-control" id="imageUrl" name="imageUrl" accept="image/*" required>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -140,6 +146,38 @@
                         <button type="submit" class="btn btn-primary">Save Product</button>
                     </div>
                 </form>
+
+
+                <%
+                    List<Product> productList = (List<Product>) request.getAttribute("productList");
+                    if (productList != null) {
+                        for (Product productCard : productList) {
+
+                %>
+                <div class="card mb-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="<%=productCard.getImageUrl()%>" class="img-fluid rounded-start" alt="Book image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><%=productCard.getProduct_name()%>
+                                </h5>
+                                <p class="card-text text-truncate"><%=productCard.getDescription()%>
+                                </p>
+                                <p class="card-text mb-1"><strong>QTY:</strong><%=productCard.getStock_quantity()%>
+                                </p>
+                                <p class="card-text mb-1"><strong>Price:</strong><%=productCard.getPrice()%>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%
+                        }
+                    }
+                %>
+            </div>
             </div>
         </div>
     </div>
@@ -153,7 +191,13 @@
 <script src="js/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-
+    function generateOrderID() {
+        console.log("Generating Order ID...");
+        const id = `OID-0${orderID}`;
+        orderID++;
+        console.log(`Generated Order ID: ${id}`);
+        return id;
+    }
 </script>
 </body>
 

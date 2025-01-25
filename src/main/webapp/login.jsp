@@ -133,7 +133,7 @@
                                     <label for="password">Password:</label>
                                     <input type="password" id="password" name="password" required>
                                 </div>
-                                <p style="text-align: start;margin-bottom: 10px"> <a href="forgot-password.jsp"> Forgot Password  </a></p>
+                                <p style="text-align: start;margin-bottom: 10px"> <a href="forgot_password.jsp"> Forgot Password  </a></p>
                                 <button type="submit" class="btn-login">Login</button>
                             </form>
                             <p>Don't have an account? <a href="signup.jsp">Sign up here</a>.</p>

@@ -107,16 +107,16 @@
                         <li><a href="loginHome.jsp">Home</a></li>
                         <li class="dropdown hassubmenu">
                         <li class="dropdown hassubmenu">
-                            <a href="shoes-collection.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            <a href="shoes_collection.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false"> Shoes-Collection-Categories
                                 <span class="fa fa-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="shoes-collection.jsp#s-main"> Sports Shoes Collection </a></li>
-                                <li><a href="shoes-collection.jsp#training">Training Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#soccer">Soccer Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#basket">BasketBall Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#spikes">Spikes Shoes</a></li>
-                                <li><a href="shoes-collection.jsp#cricket">Cricket Shoes</a></li>
+                                <li><a href="shoes_collection.jsp#s-main"> Sports Shoes Collection </a></li>
+                                <li><a href="shoes_collection.jsp#training">Training Shoes</a></li>
+                                <li><a href="shoes_collection.jsp#soccer">Soccer Shoes</a></li>
+                                <li><a href="shoes_collection.jsp#basket">BasketBall Shoes</a></li>
+                                <li><a href="shoes_collection.jsp#spikes">Spikes Shoes</a></li>
+                                <li><a href="shoes_collection.jsp#cricket">Cricket Shoes</a></li>
 
                             </ul>
                         </li>
@@ -132,7 +132,7 @@
                             </ul>
                         </li>
                         <li class="iconitem"><a class="shopicon" href="cart.jsp"><i class="fa fa-shopping-basket"></i> Cart</a></li>
-                        <li><a href="my-account.jsp">My Account</a></li>
+                        <li><a href="my_account.jsp">My Account</a></li>
                         <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i>Search</a></li>
                     </ul>
                 </div>
