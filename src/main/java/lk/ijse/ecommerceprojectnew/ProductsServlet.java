@@ -141,7 +141,6 @@ public class ProductsServlet extends HttpServlet {
                 }
 
 
-//                resp.sendRedirect("a_products.jsp?status=success&alert=Product Saved Successfully!");
             }
         } catch (Exception e) {
             resp.sendRedirect("a_products.jsp?status=failed&alert=Product Not Saved!");

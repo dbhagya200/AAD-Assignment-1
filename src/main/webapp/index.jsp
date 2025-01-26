@@ -3,13 +3,6 @@
 <html>
 <head>
     <title>E-Commerce-Web-Application</title>
-    <%--    <link rel="icon" type="image/jpg" href="/img/logo.jpg" style="border-radius: 100%;" />--%>
-    <%--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">--%>
-    <%--    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">--%>
-
-    <%--    <link rel="stylesheet" href="index.css">--%>
-    <%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>--%>
-
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -36,12 +29,6 @@
     <img class="preloader" src="images/loader.gif" alt="">
 </div><!-- end loader -->
 <!-- END LOADER -->
-
-<%--<section class="content">--%>
-<%--    <video preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-14%20at%206.13.31%20PM.mp4"></video>--%>
-<%--</section>--%>
-
-
 
 <div id="wrapper">
     <!-- BEGIN # MODAL LOGIN -->
@@ -107,8 +94,6 @@
                         <li><a href="#about-section">About Us</a></li>
                         <li><a href="#new-arrivals"> New Arrivals </a></li>
                         <li><a href="#contact">Contact</a></li>
-<%--                        <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i></a></li>--%>
-<%--                        <li class="iconitem"><a class="shopicon" href="shop-cart.html"><i class="fa fa-shopping-basket"></i> &nbsp;(0)</a></li>--%>
                     </ul>
                 </div>
             </nav><!-- end navbar -->
@@ -116,7 +101,7 @@
     </header>
 
     <section id="home" class="video-section js-height-full">
-        <video style="position: absolute; object-fit: cover; width: 100%; height: 100%;" preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-15%20at%2011.53.14%20PM.mp4"></video>
+        <video style="position: absolute; object-fit: cover; width: 100%; height: 100%;" preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-14%20at%206.13.31%20PM.mp4"></video>
         <div class="overlay"></div>
         <div class="home-text-wrapper relative container">
 
@@ -144,7 +129,7 @@
             <div class="row">
                 <div class="col-md-4 hidden-sm hidden-xs">
                     <div class="custom-module">
-                        <img src="upload/pexels-cottonbro-5076516.jpg" alt="" class="img-responsive wow slideInLeft">
+                        <img src="upload/about-img.jpg" alt="" class="img-responsive wow slideInLeft">
                     </div><!-- end module -->
                 </div><!-- end col -->
                 <div class="col-md-8">
@@ -181,14 +166,14 @@
                 <div class="caro-item">
                     <div class="course-box">
                         <div class="image-wrap entry">
-                            <img src="upload/pexels-pixabay-163535.jpg" alt="" class="img-responsive">
+                            <img src="upload/nike/training-1.jpeg" alt="" class="img-responsive">
                             <div class="magnifier">
                                 <a href="#" title=""><i class="flaticon-add"></i></a>
                             </div>
                         </div><!-- end image-wrap -->
                         <div class="course-details">
                             <h4>
-                                <small>Unisex Shoes</small>
+                                <small>Nike</small>
                                 <a href="#" title="">Casual Shoes</a>
                             </h4>
                             <p>Upgrade your everyday look with our new collection of casual shoes. From sleek sneakers to comfy slip-ons, these arrivals are all about combining style and ease for your daily adventures.</p>
@@ -197,7 +182,6 @@
                             <div class="pull-left">
                                 <ul class="list-inline">
                                     <li><a href="#"><i class="fa fa-user"></i> 21</a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-clock-o"></i> 15 Min.</a></li>--%>
                                 </ul>
                             </div><!-- end left -->
 
@@ -213,17 +197,17 @@
                 <div class="caro-item">
                     <div class="course-box">
                         <div class="image-wrap entry">
-                            <img src="upload/pexels-alteredsnaps-16234316.jpg" alt="" class="img-responsive">
+                            <img src="upload/nike/soccer-1.jpeg" alt="" class="img-responsive">
                             <div class="magnifier">
                                 <a href="#" title=""><i class="flaticon-add"></i></a>
                             </div>
                         </div><!-- end image-wrap -->
                         <div class="course-details">
                             <h4>
-                                <small>Women’s Shoes</small>
-                                <a href="#" title="">Sandals & Flats</a>
+                                <small>Nike</small>
+                                <a href="#" title="">Soccer Shoes</a>
                             </h4>
-                            <p>Step into comfort and style with our latest sandals and flats! Perfect for sunny days or casual outings, these fresh designs are lightweight, trendy, and ready to complement your wardrobe. </p>
+                            <p>Soccer shoes, also known as cleats, are specially designed footwear crafted for optimal performance on the field.  </p>
                         </div><!-- end details -->
                         <div class="course-footer clearfix">
                             <div class="pull-left">
@@ -245,17 +229,17 @@
                 <div class="caro-item">
                     <div class="course-box">
                         <div class="image-wrap entry">
-                            <img src="upload/pexels-goumbik-293405.jpg" alt="" class="img-responsive">
+                            <img src="upload/adidas/spike-1.jpeg" alt="" class="img-responsive">
                             <div class="magnifier">
                                 <a href="#" title=""><i class="flaticon-add"></i></a>
                             </div>
                         </div><!-- end image-wrap -->
                         <div class="course-details">
                             <h4>
-                                <small>Men’s Shoes</small>
-                                <a href="#" title="">Formal Shoes</a>
+                                <small>Adidas</small>
+                                <a href="#" title="">Spike Shoes</a>
                             </h4>
-                            <p>Make a lasting impression with our latest formal shoes. Whether it’s a business meeting or a special event, these sophisticated designs are crafted to keep you looking sharp and confident.</p>
+                            <p>Spike shoes are specialized athletic footwear designed for activities requiring speed and traction, such as track and field, cross country, and sprinting. </p>
                         </div><!-- end details -->
                         <div class="course-footer clearfix">
                             <div class="pull-left">
@@ -277,23 +261,22 @@
                 <div class="caro-item">
                     <div class="course-box">
                         <div class="image-wrap entry">
-                            <img src="upload/pexels-pixabay-40737.jpg" alt="" class="img-responsive">
+                            <img src="upload/avi/basket-2.jpeg" alt="" class="img-responsive">
                             <div class="magnifier">
                                 <a href="#" title=""><i class="flaticon-add"></i></a>
                             </div>
                         </div><!-- end image-wrap -->
                         <div class="course-details">
                             <h4>
-                                <small>Unisex Shoes</small>
-                                <a href="#" title="">Sandals & Slippers</a>
+                                <small>Avi</small>
+                                <a href="#" title="">Basketball Shoes</a>
                             </h4>
-                            <p>Relax in style with our new sandals and slippers! Perfect for lounging at home or stepping out in comfort, these arrivals are all about effortless charm and cozy vibes.</p>
+                            <p>Basketball shoes are designed for agility, support, and impact protection, making them perfect for the fast-paced movements of the game.</p>
                         </div><!-- end details -->
                         <div class="course-footer clearfix">
                             <div class="pull-left">
                                 <ul class="list-inline">
                                     <li><a href="#"><i class="fa fa-user"></i> 35</a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-clock-o"></i> 45 Min.</a></li>--%>
                                 </ul>
                             </div><!-- end left -->
 
@@ -309,17 +292,17 @@
                 <div class="caro-item">
                     <div class="course-box">
                         <div class="image-wrap entry">
-                            <img src="upload/pexels-danikprihodko-15878510.jpg" alt="" class="img-responsive">
+                            <img src="upload/asics/training-2.jpeg" alt="" class="img-responsive">
                             <div class="magnifier">
                                 <a href="#" title=""><i class="flaticon-add"></i></a>
                             </div>
                         </div><!-- end image-wrap -->
                         <div class="course-details">
                             <h4>
-                                <small>Specialty Shoes</small>
-                                <a href="#" title="">Seasonal Shoes</a>
+                                <small>Asics</small>
+                                <a href="#" title="">Training Shoes</a>
                             </h4>
-                            <p>Stay ready for every season with our latest collection of seasonal shoes! From cozy winter boots to breezy summer sandals, these arrivals are designed to keep you comfortable and stylish, no matter the weather.</p>
+                            <p>Training shoes are versatile footwear designed for a variety of workouts, including gym sessions, cross-training, and light running.</p>
                         </div><!-- end details -->
                         <div class="course-footer clearfix">
                             <div class="pull-left">
@@ -342,7 +325,7 @@
             <hr class="invis">
 
             <div class="section-button text-center">
-                <a href="#" class="btn btn-primary">View All Products</a>
+                <a href="product.jsp" class="btn btn-primary">View All Products</a>
             </div>
         </div><!-- end container -->
     </section>
@@ -432,22 +415,6 @@
                         <p><a href="#">Email Newsletter</a></p>
                     </div><!-- end small-box -->
                 </div><!-- end col -->
-
-                <%--                <div class="col-lg-2 col-md-2">--%>
-                <%--                    <div class="widget clearfix">--%>
-                <%--                        <h3 class="widget-title">Support</h3>--%>
-                <%--                        <div class="list-widget">--%>
-                <%--                            <ul>--%>
-                <%--                                <li><a href="#">Terms of Use</a></li>--%>
-                <%--                                <li><a href="#">Copyrights</a></li>--%>
-                <%--                                <li><a href="#">Create a Ticket</a></li>--%>
-                <%--                                <li><a href="#">Pricing & Plans</a></li>--%>
-                <%--                                <li><a href="#">Carrier</a></li>--%>
-                <%--                                <li><a href="#">Trademark</a></li>--%>
-                <%--                            </ul>--%>
-                <%--                        </div><!-- end list-widget -->--%>
-                <%--                    </div><!-- end widget -->--%>
-                <%--                </div><!-- end col -->--%>
             </div><!-- end row -->
         </div><!-- end container -->
     </footer><!-- end footer -->
@@ -482,7 +449,7 @@
 <script src="js/custom.js"></script>
 <!-- VIDEO BG PLUGINS -->
 
-<%--<script src="js/videobg.js"></script>--%>
+
 
 </body>
 </html>

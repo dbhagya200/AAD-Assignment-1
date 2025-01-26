@@ -35,10 +35,6 @@
 </div><!-- end loader -->
 <!-- END LOADER -->
 
-<%--<section class="content">--%>
-<%--    <video preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-14%20at%206.13.31%20PM.mp4"></video>--%>
-<%--</section>--%>
-
 
 
 <div id="wrapper">
@@ -115,7 +111,7 @@
 
 
     <section id="home" class="video-section js-height-full">
-        <video style="position: absolute; object-fit: cover; width: 100%; height: 100%;" preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-15%20at%2011.53.14%20PM.mp4"></video>
+        <video style="position: absolute; object-fit: cover; width: 100%; height: 100%;" preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-14%20at%206.13.31%20PM.mp4"></video>
         <div class="overlay"></div>
         <div class="home-text-wrapper relative container">
 

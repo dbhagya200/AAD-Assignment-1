@@ -45,11 +45,6 @@
 </div><!-- end loader -->
 <!-- END LOADER -->
 
-<%--<section class="content">--%>
-<%--    <video preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-14%20at%206.13.31%20PM.mp4"></video>--%>
-<%--</section>--%>
-
-
 
 <div id="wrapper">
     <!-- BEGIN # MODAL LOGIN -->
@@ -140,119 +135,23 @@
                 <section class="section gb" id="new-arrivals" style="padding: 10px;backface-visibility: hidden;
                 overflow-x: hidden; margin-top: 80px;height: 350px; background-color: dimgrey;border-radius: 10px" >
 
+                    <div class="container mt-5">
 
-
-                    <section  class="recipes" style="margin-top: 20px">
-                        <div class="container mt-5" style="height: 40px">
-                            <div class="container justify-content-between d-flex" style="font-family: 'Droid Serif', sans-serif;">
-                                <h2 class="mt-3">Cart Details</h2>
-
-                            </div>
-
-                            <div class="row gx-3 order-section">
-                                <div class="col-lg-8 mb-3">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-
-                                            <div class="row g-3 mb-3">
-                                                <div class="col-md-6 " >
-                                                    <input  type="text" class="form-control" placeholder="Order ID" aria-label="Order ID" id="orderId">
-                                                </div>
-                                                <div class="col-md-6" >
-                                                    <input  type="text" class="form-control" placeholder="Order Date" aria-label="Order Date" id="orderDate">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="row g-3 mb-3">
-<%--                                                <select class="form-select form-select-sm" aria-label="Small select example" id="cusId" >--%>
-<%--                                                    <option selected>Select Customer Id</option>--%>
-<%--                                                </select>--%>
-
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="customer Name" aria-label="Item Name" id="cusName">
-                                                </div>
-
-
-                                            </div>
-
-                                            <div class="row g-3 mb-3">
-                                                <!--  <div class="col-md-6">
-                                                      <input type="text" class="form-control" placeholder="Item Code" aria-label="Item Code" id="itCode">
-                                                  </div>-->
-<%--                                                <select class="form-select form-select-sm" aria-label="Small select example" id="itCode" >--%>
-<%--                                                    <option selected>Select item code</option>--%>
-<%--                                                </select>--%>
-
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Item Name" aria-label="Item Name" id="itName">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="row g-3">
-                                                <div class="col-md-4">
-                                                    <input type="text" class="form-control" placeholder="Unit Price" aria-label="Unit Price" id="uPrice">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <input type="text" class="form-control" placeholder="Qty On Hand" aria-label="Qty On Hand" id="qtyOnHand1">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <input type="text" class="form-control" placeholder="Qty" aria-label="Qty" id="qty">
-                                                </div>
-                                            </div>
-<%--                                            <div class="d-flex justify-content-end mt-3">--%>
-<%--                                                <button type="button" class="btn btn-primary" id="addToCart">Add to Cart</button>--%>
-<%--                                            </div>--%>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-4 mb-3">
-                                    <div class="card h-100">
-                                        <div class="card-body">
-
-                                            <div class="row g-3 mb-3">
-                                                <div class="col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Total" aria-label="Total" id="netTotal">
-                                                </div>
-
-                                            </div>
-                                            <div class="d-flex justify-content-center">
-                                                <button style="margin-top: 60px" type="button" class="btn btn-success" id="purchase">Purchase</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-<%--                            <div class="table-responsive" id="table place">--%>
-<%--                                <table class="table table-striped text-center">--%>
-<%--                                    <thead>--%>
-<%--                                    <tr>--%>
-<%--                                        <th scope="col">Item Code</th>--%>
-<%--                                        <th scope="col">Description</th>--%>
-<%--                                        <th scope="col">Price</th>--%>
-<%--                                        <th scope="col">Qty</th>--%>
-<%--                                        <th scope="col">Total</th>--%>
-<%--                                    </tr>--%>
-<%--                                    </thead>--%>
-<%--                                    <tbody id="orderTableBody">--%>
-
-<%--                                    </tbody>--%>
-<%--                                </table>--%>
-<%--                            </div>--%>
-
-
-                        </div>
-
-                    </section>
-
-
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th class=" text-light">Product Name</th>
+                            <th class=" text-light">Product Description</th>
+                            <th class=" text-light">Quantity</th>
+                            <th class=" text-light">Total Price </th>
+                            <th class=" text-light">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody id="customer_table_body">
+                        </tbody>
+                    </table>
+                    </div>
                 </section>
-
 
 
             </div>

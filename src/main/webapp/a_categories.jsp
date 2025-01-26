@@ -76,13 +76,6 @@
                     <a class="nav-link" href="logout">Logout</a>
                 </li>
             </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form> -->
-            <!-- <div class="cart-icon">
-                <a href="#"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
-            </div> -->
         </div>
     </nav>
 
@@ -110,13 +103,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="container m-2">
-                    <form id="addCustomerForm" action="admin" method="post">
+                    <form id="addCustomerForm" action="category" method="post">
                         <div class="mb-3 text-center">
-                            <label  for="name" class="form-label fs-4 fw-bold ">Add New Category </label>
+                            <label  for="category_name" class="form-label fs-4 fw-bold ">Add New Category </label>
                         </div>
                         <div class="mb-3">
-                            <label style="text-align: start;" for="name" class="form-label">Category Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
+                            <label style="text-align: start;" for="category_name" class="form-label">Category Name</label>
+                            <input type="text" class="form-control" id="category_name" name="category_name" required>
                         </div>
 
 
@@ -140,11 +133,11 @@
                     <form id="editCtegoryForm">
                         <div class="mb-3">
                             <label for="editID" class="form-label">Category ID</label>
-                            <input type="text" class="form-control" id="editID" name="ID" readonly>
+                            <input type="text" class="form-control" id="editID" name="editID" readonly>
                         </div>
                         <div class="mb-3">
                             <label for="editname" class="form-label">Category Name</label>
-                            <input type="text" class="form-control" id="editname" name="name" readonly>
+                            <input type="text" class="form-control" id="editname" name="editname" required>
                         </div>
 
                     </form>
@@ -183,56 +176,49 @@
             url: "category",
             method: "GET",
             success: function (response) {
-                // Parse the JSON response if needed
                 const category = typeof response === "string" ? JSON.parse(response) : response;
                 const tableBody = document.getElementById("categoryTableBody");
 
-                // Clear the table body before appending new rows
                 tableBody.innerHTML = "";
 
-                // Iterate over users array and create rows for each user
                 category.forEach(function(category) {
-                    // Create a new row
                     const newRow = tableBody.insertRow();
 
-                    // Insert cells into the new row
-                    const category_id = newRow.insertCell(0); // Username cell
+                    const category_id = newRow.insertCell(0);
                     const category_name = newRow.insertCell(1);
-                    const actionCell = newRow.insertCell(2);   // Action cell// Email cell
+                    const actionCell = newRow.insertCell(2);
 
 
-                    // Add data to the username and email cells
                     category_id.textContent = category.category_id;
                     category_name.textContent = category.category_name;
 
-                    // Create edit and delete icons
                     const editIcon = document.createElement("i");
-                    editIcon.className = "fas fa-pencil-alt"; // FontAwesome class for pencil icon
+                    editIcon.className = "fas fa-pencil-alt";
                     editIcon.style.color = "teal";
                     editIcon.style.cursor = "pointer";
                     editIcon.title = "Edit category";
                     editIcon.addEventListener("click", () => {
-                        alert(`Edit category: ${category.category_id}`);
-                        // Add your edit logic here
-                        editCategoryModel();
-                        updateCategory(category_id);
+                        document.getElementById("editID").value = category.category_id;
+                        document.getElementById("editname").value = category.category_name;
+
+                        const editModal = new bootstrap.Modal(document.getElementById("editCategoryModel"));
+                        editModal.show();
                     });
 
                     const deleteIcon = document.createElement("i");
-                    deleteIcon.className = "fas fa-trash-alt"; // FontAwesome class for trash icon
+                    deleteIcon.className = "fas fa-trash-alt";
                     deleteIcon.style.color = "red";
                     deleteIcon.style.cursor = "pointer";
                     deleteIcon.title = "Delete User";
                     deleteIcon.addEventListener("click", () => {
                         if (confirm(`Are you sure you want to delete category: ${category.category_id}?`)) {
-                            deleteCategory(category_id); // Call delete function
+                            deleteCategory(category.category_id);
 
                         }
                     });
 
-                    // Append icons to the action cell
                     actionCell.appendChild(editIcon);
-                    actionCell.appendChild(document.createTextNode(" ")); // Add spacing
+                    actionCell.appendChild(document.createTextNode(" "));
                     actionCell.appendChild(deleteIcon);
                 });
             },
@@ -247,7 +233,7 @@
             return;
         }
         $.ajax({
-            url: "/E_Commerce_Project_New_war_exploded/category?ID=" + encodeURIComponent(category_id),
+            url: "/E_Commerce_Project_New_war_exploded/category?category_id=" + encodeURIComponent(category_id),
             method: "DELETE",
             success: function (response) {
                 alert(response);
@@ -260,6 +246,33 @@
         });
     }
 
+    function updateCategory() {
+        const category_id = document.getElementById("editID").value;
+        const category_name = document.getElementById("editname").value;
+
+        if (!category_id || !category_name) {
+            alert(" category ID and name are required.");
+            return;
+        }
+
+        $.ajax({
+            url: "/E_Commerce_Project_New_war_exploded/category?category_id=" + encodeURIComponent(category_id),
+            method: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify({
+                category_id: category_id,
+                category_name: category_name,
+            }),
+            success: function (response) {
+                alert(response);
+                fetchCategory();
+            },
+            error: function (xhr, status, error) {
+                console.error("Error updating category:", error);
+                alert(`Error: ${xhr.responseText || "Failed to update category."}`);
+            }
+        });
+    }
 
 
 

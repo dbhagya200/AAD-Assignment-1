@@ -78,13 +78,6 @@
                     <a class="nav-link" href="logout">Logout</a>
                 </li>
             </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form> -->
-            <!-- <div class="cart-icon">
-                <a href="#"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
-            </div> -->
         </div>
     </nav>
 
@@ -95,11 +88,6 @@
 
 <div class="container mt-5">
     <h2 class="mb-3">User Details</h2>
-<%--    <div class="input-group ">--%>
-<%--        <input type="text" class="form-control" placeholder="Search by name" id="search-bar">--%>
-<%--        <button class="btn btn-primary" type="button">Search</button>--%>
-
-<%--    </div>--%>
     <div class="container justify-content-between d-flex">
         <h4 class="mt-5">User List</h4>
     </div>
@@ -128,51 +116,42 @@
         url: "a-users",
         method: "GET",
         success: function (response) {
-            // Parse the JSON response if needed
             const users = typeof response === "string" ? JSON.parse(response) : response;
             const tableBody = document.getElementById("customer_table_body");
 
-            // Clear the table body before appending new rows
             tableBody.innerHTML = "";
 
-            // Iterate over users array and create rows for each user
             users.forEach(function(user) {
-                // Create a new row
+
                 const newRow = tableBody.insertRow();
 
-                // Insert cells into the new row
-                const usernameCell = newRow.insertCell(0); // Username cell
-                const emailCell = newRow.insertCell(1);    // Email cell
-                const actionCell = newRow.insertCell(2);   // Action cell
+                const usernameCell = newRow.insertCell(0);
+                const emailCell = newRow.insertCell(1);
+                const actionCell = newRow.insertCell(2);
 
-                // Add data to the username and email cells
                 usernameCell.textContent = user.username;
                 emailCell.textContent = user.email;
 
-                // Create edit and delete icons
                 const editIcon = document.createElement("i");
-                editIcon.className = "fas fa-pencil-alt"; // FontAwesome class for pencil icon
+                editIcon.className = "fas fa-pencil-alt";
                 editIcon.style.color = "teal";
                 editIcon.style.cursor = "pointer";
                 editIcon.title = "Edit User";
                 editIcon.addEventListener("click", () => {
                     alert(`Edit user: ${user.username}`);
-                    // Add your edit logic here
                 });
 
                 const deleteIcon = document.createElement("i");
-                deleteIcon.className = "fas fa-trash-alt"; // FontAwesome class for trash icon
+                deleteIcon.className = "fas fa-trash-alt";
                 deleteIcon.style.color = "red";
                 deleteIcon.style.cursor = "pointer";
                 deleteIcon.title = "Delete User";
                 deleteIcon.addEventListener("click", () => {
                     alert(`Delete user: ${user.username}`);
-                    // Add your delete logic here
                 });
 
-                // Append icons to the action cell
                 actionCell.appendChild(editIcon);
-                actionCell.appendChild(document.createTextNode(" ")); // Add spacing
+                actionCell.appendChild(document.createTextNode(" "));
                 actionCell.appendChild(deleteIcon);
             });
         },

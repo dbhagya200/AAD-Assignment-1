@@ -76,13 +76,6 @@
                     <a class="nav-link" href="logout">Logout</a>
                 </li>
             </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form> -->
-            <!-- <div class="cart-icon">
-                <a href="#"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
-            </div> -->
         </div>
     </nav>
 
@@ -201,55 +194,46 @@
             url: "admin",
             method: "GET",
             success: function (response) {
-                // Parse the JSON response if needed
                 const admin = typeof response === "string" ? JSON.parse(response) : response;
                 const tableBody = document.getElementById("customer_table_body");
 
-                // Clear the table body before appending new rows
                 tableBody.innerHTML = "";
 
-                // Iterate over users array and create rows for each user
                 admin.forEach(function(admin) {
-                    // Create a new row
                     const newRow = tableBody.insertRow();
 
-                    // Insert cells into the new row
-                    const usernameCell = newRow.insertCell(0); // Username cell
-                    const emailCell = newRow.insertCell(1);    // Email cell
-                    const actionCell = newRow.insertCell(2);   // Action cell
+                    const usernameCell = newRow.insertCell(0);
+                    const emailCell = newRow.insertCell(1);
+                    const actionCell = newRow.insertCell(2);
 
-                    // Add data to the username and email cells
                     usernameCell.textContent = admin.username;
                     emailCell.textContent = admin.email;
 
-                    // Create edit and delete icons
                     const editIcon = document.createElement("i");
-                    editIcon.className = "fas fa-pencil-alt"; // FontAwesome class for pencil icon
+                    editIcon.className = "fas fa-pencil-alt";
                     editIcon.style.color = "teal";
                     editIcon.style.cursor = "pointer";
                     editIcon.title = "Edit admin";
                     editIcon.addEventListener("click", () => {
                         alert(`Edit user: ${admin.username}`);
-                        // Add your edit logic here
                         openEditModal();
                         updateAdmin(admin.username);
                     });
 
                     const deleteIcon = document.createElement("i");
-                    deleteIcon.className = "fas fa-trash-alt"; // FontAwesome class for trash icon
+                    deleteIcon.className = "fas fa-trash-alt";
                     deleteIcon.style.color = "red";
                     deleteIcon.style.cursor = "pointer";
                     deleteIcon.title = "Delete User";
                     deleteIcon.addEventListener("click", () => {
                         if (confirm(`Are you sure you want to delete admin: ${admin.username}?`)) {
-                            deleteAdmin(admin.username); // Call delete function
+                            deleteAdmin(admin.username);
 
                         }
                     });
 
-                    // Append icons to the action cell
                     actionCell.appendChild(editIcon);
-                    actionCell.appendChild(document.createTextNode(" ")); // Add spacing
+                    actionCell.appendChild(document.createTextNode(" "));
                     actionCell.appendChild(deleteIcon);
                 });
             },
@@ -286,7 +270,6 @@
         $('#editAdminModal').modal('show');
     }
 
-    // Function to update admin
     function updateAdmin(username) {
      $('#editUsername').val(username);
         const email = $('#editEmail').val();
@@ -313,56 +296,6 @@
             }
         });
     }
-
-
-
-    <%--function editAdmin(username) {--%>
-    <%--    // Fetch the row directly by its ID--%>
-    <%--    const adminRow = document.querySelector(`#admin-${username}`);--%>
-    <%--    const email = adminRow.querySelector('.email').textContent;--%>
-
-    <%--    // Populate the modal fields--%>
-    <%--    document.getElementById('editUsername').value = username;--%>
-    <%--    document.getElementById('editEmail').value = email;--%>
-
-    <%--    // Display the modal--%>
-    <%--    document.getElementById('editAdminModal').style.display = 'block';--%>
-    <%--}--%>
-    <%--function updateAdmin() {--%>
-    <%--    // Get the updated data--%>
-    <%--    const username = document.getElementById('editUsername').value;--%>
-    <%--    const email = document.getElementById('editEmail').value;--%>
-    <%--    const password = document.getElementById('editPassword').value;--%>
-    <%--    const confirmPassword = document.getElementById('editConfirm').value;--%>
-
-    <%--    // Validate password match--%>
-    <%--    if (password !== confirmPassword) {--%>
-    <%--        alert('Passwords do not match!');--%>
-    <%--        return;--%>
-    <%--    }--%>
-
-    <%--    // Perform AJAX request to update the admin--%>
-    <%--    $.ajax({--%>
-    <%--        url: `/E_Commerce_Project_New_war_exploded/admin?username=${encodeURIComponent(username)}`,--%>
-    <%--        method: 'PUT',--%>
-    <%--        data: { email, password },--%>
-    <%--        success: function () {--%>
-    <%--            alert('Admin updated successfully!');--%>
-
-    <%--            // Update the table directly without loops--%>
-    <%--            const adminRow = document.querySelector(`#admin-${username}`);--%>
-    <%--            adminRow.querySelector('.email').textContent = email;--%>
-
-    <%--            // Hide the modal--%>
-    <%--            document.getElementById('editAdminModal').style.display = 'none';--%>
-    <%--        },--%>
-    <%--        error: function (xhr, status, error) {--%>
-    <%--            console.error('Error updating admin:', xhr.responseText);--%>
-    <%--            alert('Failed to update admin!');--%>
-    <%--        }--%>
-    <%--    });--%>
-    <%--}--%>
-
 
 
 

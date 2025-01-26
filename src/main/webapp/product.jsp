@@ -39,12 +39,6 @@
 </div><!-- end loader -->
 <!-- END LOADER -->
 
-<%--<section class="content">--%>
-<%--    <video preload="none" autoplay muted loop playsinline="true" src="upload/WhatsApp%20Video%202025-01-14%20at%206.13.31%20PM.mp4"></video>--%>
-<%--</section>--%>
-
-
-
 <div id="wrapper">
     <!-- BEGIN # MODAL LOGIN -->
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
@@ -133,22 +127,10 @@
             </div>
             <div class="home-message"  >
 
-
-
-
-
-
             </div>
         </div>
 
-
-
     </section>
-
-
-
-
-
 
 </div><!-- end wrapper -->
 
@@ -158,64 +140,16 @@
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-
-<%--<script>--%>
-<%--    $(document).ready(function () {--%>
-<%--        // Function to load products--%>
-<%--        function loadProducts() {--%>
-<%--            $.ajax({--%>
-<%--                url: "/E_Commerce_Project_New_war_exploded/products", // URL of the servlet--%>
-<%--                method: "GET",--%>
-<%--                success: function (data) {--%>
-<%--                    const container = $(".product-container");--%>
-<%--                    container.empty(); // Clear existing products--%>
-
-<%--                    if (data && data.length > 0) {--%>
-<%--                        data.forEach(product => {--%>
-<%--                            const card = `--%>
-<%--                                <div class="card" style="width: 18rem; border: 1px solid #ddd; border-radius: 10px; padding: 15px;">--%>
-<%--                                    <img src="${product.imageUrl}" class="card-img-top" alt="${product.product_name}" style="height: 200px; object-fit: cover;">--%>
-<%--                                    <div class="card-body">--%>
-<%--                                        <h5 class="card-title">${product.product_name}</h5>--%>
-<%--                                        <p class="card-text">${product.description}</p>--%>
-<%--                                        <p class="card-text"><strong>Price:</strong> $${product.price}</p>--%>
-<%--                                        <p class="card-text"><strong>Stock:</strong> ${product.stock_quantity}</p>--%>
-<%--                                        <button class="btn btn-primary">Add to Cart</button>--%>
-<%--                                    </div>--%>
-<%--                                </div>`;--%>
-<%--                            container.append(card);--%>
-<%--                        });--%>
-<%--                    } else {--%>
-<%--                        container.html("<p>No products available</p>");--%>
-<%--                    }--%>
-<%--                },--%>
-<%--                error: function () {--%>
-<%--                    alert("Failed to load products. Please try again later.");--%>
-<%--                }--%>
-<%--                --%>
-
-<%--            });--%>
-<%--        }--%>
-
-<%--        // Call the function to load products--%>
-<%--        loadProducts();--%>
-<%--    });--%>
-<%--</script>--%>
-
 <script>
     $(document).ready(function () {
-        // Function to load products
         function loadProducts() {
-            fetch("/E_Commerce_Project_New_war_exploded/products") // URL of the servlet
+            fetch("/E_Commerce_Project_New_war_exploded/products")
                 .then(response => response.json())
                 .then(data => {
                     const container = document.getElementById("product-container");
 
                     if (data && data.length > 0) {
                         data.forEach(product => {
-                            // Create a new div element for the card (this is the 'cell' variable)
                             const cell = document.createElement("div");
                             cell.classList.add("card");
                             cell.style.width = "27rem";
@@ -225,7 +159,6 @@
                             cell.style.marginBottom = "20px";
                             cell.style.backgroundColor = "#fff";
 
-                            // Create the image element and append it to the cell
                             const image = document.createElement("img");
                             image.src = product.imageUrl || '/path/to/default-image.jpg';
                             image.classList.add("card-img-top");
@@ -234,24 +167,20 @@
                             image.style.objectFit = "cover";
                             cell.appendChild(image);
 
-                            // Create the card body element and append it to the cell
                             const cardBody = document.createElement("div");
                             cardBody.classList.add("card-body");
 
-                            // Add product title to card body
                             const title = document.createElement("h5");
                             title.classList.add("card-title");
                             title.textContent = product.product_name;
                             cardBody.appendChild(title);
 
-                            // Add product description to card body
                             const description = document.createElement("p");
                             description.classList.add("card-text");
                             description.textContent = product.description;
                             description.style.color = "#3C3D37"
                             cardBody.appendChild(description);
 
-                            // Add product price to card body
                             const price = document.createElement("p");
                             price.classList.add("card-text");
                             <%--price.innerTML = `<strong>Price:</strong> $ ${product.price}`;--%>
@@ -260,15 +189,9 @@
                             price.style.color = "#243642"
                             cardBody.appendChild(price);
 
-                            // Add product stock to card body
-                            <%--const stock = document.createElement("p");--%>
-                            <%--stock.classList.add("card-text");--%>
-                            <%--stock.innerHTML = `<strong>Stock:</strong> ${product.stock_quantity}`;--%>
-                            <%--cardBody.appendChild(stock);--%>
-
                             const quantityLabel = document.createElement("label");
                             quantityLabel.textContent = "Quantity:";
-                            quantityLabel.style.display = "block"; // Ensure it appears above the input
+                            quantityLabel.style.display = "block";
                             quantityLabel.style.marginBottom = "5px";
                             quantityLabel.style.color = "#3C3D37"
                             cardBody.appendChild(quantityLabel);
@@ -283,9 +206,6 @@
                             quantityInput.style.marginBottom = "10px";
                             cardBody.appendChild(quantityInput);
 
-
-
-                            // Add Add to Cart button to card body
                             const addButton = document.createElement("button");
                             addButton.classList.add("btn", "btn-primary");
                             addButton.textContent = "Add to Cart";
@@ -296,7 +216,6 @@
                             addButton.dataset.productPrice = product.price;
                             addButton.dataset.stockQuantity = product.stock_quantity;
 
-                            // Add click event listener to the Add to Cart button
                             addButton.addEventListener("click", function () {
                                 const quantity = parseInt(quantityInput.value);
                                 addToCart({
@@ -308,12 +227,7 @@
                             });
 
                             cardBody.appendChild(addButton);
-
-
-                            // Append the card body to the card (cell)
                             cell.appendChild(cardBody);
-
-                            // Append the card (cell) to the container
                             container.appendChild(cell);
 
 
@@ -326,31 +240,12 @@
                 .catch(error => console.error("Error fetching products:", error));
         }
 
-        function addToCart(product) {
-            // Check if cart exists in local storage
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-            // Check if the product is already in the cart
-            const existingProduct = cart.find(item => item.id === product.id);
-            if (existingProduct) {
-                // Update the quantity of the existing product
-                existingProduct.quantity += product.quantity;
-            } else {
-                // Add the new product to the cart
-                cart.push(product);
-            }
-
-            // Save the updated cart to local storage
-            localStorage.setItem("cart", JSON.stringify(cart));
-
-            // Notify the user
-            alert(`${product.name} has been added to your cart!`);
-            console.log("Cart:", cart);
-        }
-
-        // Call the function to load products
         loadProducts();
     });
+
+
+
+
 </script>
 
 
