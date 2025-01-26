@@ -142,6 +142,8 @@ Contributions are welcome! If you'd like to contribute:
 ![ss-newArrival](https://github.com/user-attachments/assets/2a0fcc1d-0af6-4ed9-ae20-ab8a7d38bdd7)
 ![ss-userHome](https://github.com/user-attachments/assets/1fcd3735-a395-4ed9-9531-9753378f568f)
 ![ss-user-product-Viewer](https://github.com/user-attachments/assets/b988723a-9914-42b4-b9d7-50093857fa75)
+![ss-add to cart](https://github.com/user-attachments/assets/45cd8627-65b1-4593-a809-ea1408134a16)
+
 
 
 
