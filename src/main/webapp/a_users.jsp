@@ -11,7 +11,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Customer Management System</title>
+    <title>User Management </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link
@@ -66,13 +66,16 @@
                     <a class="nav-link" href="a_users.jsp">Users</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-products.jsp">Products</a>
+                    <a class="nav-link" href="a_products.jsp">Products</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="a_categories.jsp">Categories</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="a_orders.jsp">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout">Logout</a>
                 </li>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">

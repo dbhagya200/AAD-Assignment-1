@@ -131,7 +131,7 @@ public class AdminServlet extends HttpServlet {
                 preparedStatement.setString(1, email);
                 preparedStatement.setString(2, password);
                 preparedStatement.setString(3, username);
-
+                System.out.println("Updating Admin: username=" + username + ", email=" + email + ", password=" + password);
                 int rowsUpdated = preparedStatement.executeUpdate();
 
                 if (rowsUpdated > 0) {

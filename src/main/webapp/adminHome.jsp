@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Customer Management System</title>
+    <title>Admin Management</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link
@@ -64,13 +64,16 @@
                     <a class="nav-link" href="a_users.jsp">Users</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="a-products.jsp">Products</a>
+                    <a class="nav-link" href="a_products.jsp">Products</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="a_categories.jsp">Categories</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="a_orders.jsp">Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout">Logout</a>
                 </li>
             </ul>
             <!-- <form class="form-inline my-2 my-lg-0">
@@ -148,19 +151,19 @@
                     <form id="editAdminForm">
                         <div class="mb-3">
                             <label for="editUsername" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="editUsername" name="username" readonly>
+                            <input type="text" class="form-control" id="editUsername" name="editUsername" readonly>
                         </div>
                         <div class="mb-3">
                             <label for="editEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="editEmail" name="email" required>
+                            <input type="email" class="form-control" id="editEmail" name="editEmail" required>
                         </div>
                         <div class="mb-3">
                             <label for="editPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="editPassword" name="password" required>
+                            <input type="password" class="form-control" id="editPassword" name="editPassword" required>
                         </div>
                         <div class="mb-3">
                             <label for="editconfirm" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="editconfirm" name="confirm" required>
+                            <input type="password" class="form-control" id="editconfirm" name="editconfirm" required>
                         </div>
                     </form>
                 </div>
@@ -310,6 +313,56 @@
             }
         });
     }
+
+
+
+    <%--function editAdmin(username) {--%>
+    <%--    // Fetch the row directly by its ID--%>
+    <%--    const adminRow = document.querySelector(`#admin-${username}`);--%>
+    <%--    const email = adminRow.querySelector('.email').textContent;--%>
+
+    <%--    // Populate the modal fields--%>
+    <%--    document.getElementById('editUsername').value = username;--%>
+    <%--    document.getElementById('editEmail').value = email;--%>
+
+    <%--    // Display the modal--%>
+    <%--    document.getElementById('editAdminModal').style.display = 'block';--%>
+    <%--}--%>
+    <%--function updateAdmin() {--%>
+    <%--    // Get the updated data--%>
+    <%--    const username = document.getElementById('editUsername').value;--%>
+    <%--    const email = document.getElementById('editEmail').value;--%>
+    <%--    const password = document.getElementById('editPassword').value;--%>
+    <%--    const confirmPassword = document.getElementById('editConfirm').value;--%>
+
+    <%--    // Validate password match--%>
+    <%--    if (password !== confirmPassword) {--%>
+    <%--        alert('Passwords do not match!');--%>
+    <%--        return;--%>
+    <%--    }--%>
+
+    <%--    // Perform AJAX request to update the admin--%>
+    <%--    $.ajax({--%>
+    <%--        url: `/E_Commerce_Project_New_war_exploded/admin?username=${encodeURIComponent(username)}`,--%>
+    <%--        method: 'PUT',--%>
+    <%--        data: { email, password },--%>
+    <%--        success: function () {--%>
+    <%--            alert('Admin updated successfully!');--%>
+
+    <%--            // Update the table directly without loops--%>
+    <%--            const adminRow = document.querySelector(`#admin-${username}`);--%>
+    <%--            adminRow.querySelector('.email').textContent = email;--%>
+
+    <%--            // Hide the modal--%>
+    <%--            document.getElementById('editAdminModal').style.display = 'none';--%>
+    <%--        },--%>
+    <%--        error: function (xhr, status, error) {--%>
+    <%--            console.error('Error updating admin:', xhr.responseText);--%>
+    <%--            alert('Failed to update admin!');--%>
+    <%--        }--%>
+    <%--    });--%>
+    <%--}--%>
+
 
 
 

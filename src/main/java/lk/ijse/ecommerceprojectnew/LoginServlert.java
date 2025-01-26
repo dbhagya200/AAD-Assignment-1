@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @WebServlet(name = "LoginServlert", value = "/login")
@@ -28,18 +29,35 @@ public class LoginServlert extends HttpServlet {
 
         try {
             Connection connection = dataSource.getConnection();
-            PreparedStatement prsm = connection.prepareStatement("SELECT * FROM users WHERE username=? AND password=?");
-            prsm.setString(1, username);
-            prsm.setString(2, password);
+            PreparedStatement adminStmt = connection.prepareStatement(
+                    "SELECT * FROM admin WHERE username=? AND password=?"
+            );
+            adminStmt.setString(1, username);
+            adminStmt.setString(2, password);
+            ResultSet adminResult = adminStmt.executeQuery();
 
-            if (prsm.executeQuery().next()) {
-
-                resp.sendRedirect("loginHome.jsp?message=Login%20Successful");
-            }else {
-                resp.sendRedirect("login.jsp?error=Invalid%20username%20or%20password");
+            if (adminResult.next()) {
+                resp.sendRedirect("adminHome.jsp?message=Welcome%20Admin");
+                return;
             }
+
+            PreparedStatement userStmt = connection.prepareStatement(
+                    "SELECT * FROM users WHERE username=? AND password=?"
+            );
+            userStmt.setString(1, username);
+            userStmt.setString(2, password);
+            ResultSet userResult = userStmt.executeQuery();
+
+            if (userResult.next()) {
+                resp.sendRedirect("loginHome.jsp?message=Welcome%20User");
+                return;
+            }
+
+            resp.sendRedirect("login.jsp?error=Invalid%20username%20or%20password");
+
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            resp.sendRedirect("login.jsp?error=Something%20went%20wrong");
         }
 
     }

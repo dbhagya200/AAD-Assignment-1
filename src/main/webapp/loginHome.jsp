@@ -104,24 +104,14 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="loginHome.jsp">Home</a></li>
-                        <li class="dropdown hassubmenu">
-                            <a href="brands.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-expanded="false">Products <span class="fa fa-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="brands.jsp#nike">Nike</a></li>
-                                <li><a href="brands.jsp#adidas">Adidas</a></li>
-                                <li><a href="brands.jsp#asics">Asics</a></li>
-                                <li><a href="brands.jsp#avi">AVI</a></li>
-                                <li><a href="brands.jsp#hoka">Hoka</a></li>
-                            </ul>
-                        </li>
-                        <li class="iconitem"><a class="shopicon" href="cart.jsp"><i class="fa fa-shopping-basket"></i> Cart</a></li>
+                        <li><a href="product.jsp">Products</a></li>
+                        <li><a href="cart_orders.jsp"><i class="fa fa-shopping-basket"></i>Cart</a></li>
                         <li class="dropdown hassubmenu">
                             <a href="my_account.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">My Account <span class="fa fa-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="">Profile</a></li>
-                                <li><a href="">Logout</a></li>
+                                <li><a href="logout">Logout</a></li>
                             </ul>
                         </li>
                         <li class="iconitem"><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-search"></i>Search</a></li>
@@ -143,16 +133,16 @@
         <section id="recipes" class="recipes" style="margin-top: 200px">
 
             <div class="image-gallery">
-                <a href="brands.jsp#nike" class="recipe-card">
+                <a href="product.jsp#nike" class="recipe-card">
                     <img src="upload/nike-logo.jpeg" alt="" />
                 </a>
-                <a href="brands.jsp#adidas" class="recipe-card">
+                <a href="product.jsp#adidas" class="recipe-card">
                     <img
                             src="upload/adidas%20logo.jpeg"
                             alt="Easy Fruit Smoothie"
                     />
                 </a>
-                <a href="brands.jsp#avi" class="recipe-card">
+                <a href="product.jsp#avi" class="recipe-card">
                     <img
                             src="upload/avi-logo.png"
                             alt="Delicious Spaghetti"
@@ -165,10 +155,10 @@
         <section  class="recipes" style="margin-top: 20px">
 
             <div class="image-gallery">
-                <a href="brands.jsp#asics" class="recipe-card" >
+                <a href="product.jsp#asics" class="recipe-card" >
                     <img src="upload/asics%20logo.jpeg" alt="" />
                 </a>
-                <a href="brands.jsp#hoka" class="recipe-card">
+                <a href="product.jsp#hoka" class="recipe-card">
                     <img
                             src="upload/Hoka.jpeg"
                             alt="Easy Fruit Smoothie"

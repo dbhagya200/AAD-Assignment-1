@@ -1,5 +1,6 @@
 package lk.ijse.ecommerceprojectnew;
 
+import com.google.gson.Gson;
 import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -8,6 +9,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
+import jdk.jfr.Category;
+import lk.ijse.ecommerceprojectnew.model.Categories;
 import lk.ijse.ecommerceprojectnew.model.Product;
 import org.springframework.security.core.userdetails.User;
 
@@ -34,86 +37,119 @@ public class ProductsServlet extends HttpServlet {
     private DataSource dataSource;
 
 
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("application/json");
+        resp.setCharacterEncoding("UTF-8");
+
         Connection connection = null;
-        try{
+        try {
             connection = dataSource.getConnection();
             ResultSet resultSet = connection.prepareStatement("SELECT * FROM products").executeQuery();
-            List<Product> productcards = new ArrayList<>();
+            List<Product> products = new ArrayList<>();
 
-            while (resultSet.next()){
-                productcards.add(new Product(
+            while (resultSet.next()) {
+                products.add(new Product(
                         resultSet.getInt("product_id"),
                         resultSet.getString("product_name"),
                         resultSet.getString("description"),
-                        resultSet.getDouble("price"),
+                        resultSet.getString("price"),
                         resultSet.getInt("stock_quantity"),
-                        resultSet.getString("imageUrl")
-
+                        resultSet.getString("imageUrl"),
+                        resultSet.getInt("category_id")
                 ));
             }
 
-            req.setAttribute("productList", productcards);
-//            User user = (User) req.getServletContext().getAttribute("user");
-//            if (user.getRole().equals("admin")) {
-//                req.getRequestDispatcher("product.jsp").forward(req, resp);
-//            }
-//            req.getRequestDispatcher("user.jsp").forward(req, resp);
+            // Convert the product list to JSON
+            String json = new Gson().toJson(products);
+            resp.getWriter().write(json);
 
-            connection.close();
-        }catch (Exception e){
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            e.printStackTrace();
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            resp.getWriter().write("{\"error\": \"Failed to load products\"}");
+        } finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Connection connection = null;
+
+
         try {
             String name = req.getParameter("product_name");
-            String description = req.getParameter("product_description");
-            String qty = req.getParameter("product_qty");
-            String price = req.getParameter("product_price");
-//            String categoryID = req.getParameter("product_category");
+            String description = req.getParameter("description");
+            String price = req.getParameter("price");
+            String quantity = req.getParameter("stock_quantity");
+            String catId = req.getParameter("category_id");
 
-            System.out.println(name + " " + description + " " + qty + " " + price + " " );
+            Part filePart = req.getPart("imageUrl");
+            String imageFileName = filePart.getSubmittedFileName();
+            System.out.println(imageFileName);
 
-            Part filepart = req.getPart("product_image");
-            String fileName = filepart.getSubmittedFileName();
+            String uploadDir = "/home/dilini/Documents/IJSE-Institute of Software Engineering/2nd Semester/AAD/Spring/E-Commerce-Project-New/src/main/webapp/productImages";
+            File uploadDirectory = new File(uploadDir);
 
-            String uploadDir = " \\home\\dilini\\Documents\\IJSE-Institute of Software Engineering\\2nd Semester\\AAD\\Spring\\E-Commerce-Project-New\\src\\main\\webapp\\productImages";
+            if (!uploadDirectory.exists()) {
+                if (!uploadDirectory.mkdirs()) {
+                    resp.sendRedirect("a_products.jsp?sysError=Something wrong in our end!");
+                    return;
+                }
+                System.out.println("created");
+            }
 
-            File imageFile = new File(uploadDir + File.separator + fileName);
-
-            try (InputStream inputStream = filepart.getInputStream()){
+            File imageFile = new File(uploadDir + File.separator + imageFileName);
+            try (InputStream inputStream = filePart.getInputStream()) {
                 Files.copy(inputStream, imageFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                System.out.println(imageFile.toPath());
             }
 
-            connection = dataSource.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement
-                    ("INSERT INTO products (product_name,imageUrl,description,stock_quantity,price) VALUES (?,?,?,?,?)");
-            preparedStatement.setString(1, name);
-            String imagePath = "/productImages/" + fileName;
-            preparedStatement.setString(2, imagePath);
-            preparedStatement.setString(3, description);
-            preparedStatement.setInt(4, Integer.parseInt(qty));
-            preparedStatement.setDouble(5, Double.parseDouble(price));
-//            preparedStatement.setInt(6, Integer.parseInt(categoryID));
+            Product product = new Product();
+            product.setProduct_name(name);
+            product.setDescription(description);
+            product.setPrice(price);
+            product.setStock_quantity(Integer.parseInt(quantity));
+            product.setImageUrl("productImages/" + imageFileName);
 
-            if (preparedStatement.executeUpdate()>0){
-                resp.sendRedirect("product?message=product Save Success");
-                System.out.println("Product saved");
+
+            try (Connection connection = dataSource.getConnection()) {
+                String sql = "INSERT INTO products (product_name, description, price, stock_quantity, imageUrl, category_id) VALUES (?, ?, ?, ?, ?, ?)";
+                try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                    preparedStatement.setString(1, name);
+                    preparedStatement.setString(2, description);
+                    preparedStatement.setString(3, price);
+                    preparedStatement.setInt(4, Integer.parseInt(quantity));
+                    preparedStatement.setString(5, product.getImageUrl());
+                    preparedStatement.setString(6, catId);
+
+
+                    int rowsAffected = preparedStatement.executeUpdate();
+
+                    if (rowsAffected > 0) {
+                        resp.sendRedirect("a_products.jsp?status=success&alert=Product Saved Successfully!");
+                    } else {
+                        resp.sendRedirect("a_products.jsp?status=failed&alert=Product Not Saved!");
+                    }
+                }
+
+
+//                resp.sendRedirect("a_products.jsp?status=success&alert=Product Saved Successfully!");
             }
-
-            connection.close();
         } catch (Exception e) {
-            resp.sendRedirect("product?message=product Save Failed");
+            resp.sendRedirect("a_products.jsp?status=failed&alert=Product Not Saved!");
             e.printStackTrace();
-        }
-            }
-        }
 
+        }
+    }
+
+}
 
 

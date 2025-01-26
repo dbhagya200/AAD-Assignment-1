@@ -89,15 +89,9 @@
                             </ul>
                         </li>
                         <li class="dropdown hassubmenu">
-                            <a href="brands.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            <a href="product.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">Brands <span class="fa fa-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="brands.jsp#nike">Nike</a></li>
-                                <li><a href="brands.jsp#adidas">Adidas</a></li>
-                                <li><a href="brands.jsp#asics">Asics</a></li>
-                                <li><a href="brands.jsp#avi">AVI</a></li>
-                                <li><a href="brands.jsp#hoka">Hoka</a></li>
-                            </ul>
+
                         </li>
                         <li class="iconitem"><a class="shopicon" href="cart.jsp"><i class="fa fa-shopping-basket"></i> Cart</a></li>
                         <li><a href="my_account.jsp">My Account</a></li>
