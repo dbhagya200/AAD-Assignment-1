@@ -219,8 +219,8 @@
                             addButton.addEventListener("click", function () {
                                 const quantity = parseInt(quantityInput.value);
                                 addToCart({
-                                    id: product.id,
-                                    name: product.product_name,
+                                    p_description: product.description,
+                                    name: product.name,
                                     price: product.price,
                                     quantity: quantity,
                                 });
@@ -242,6 +242,31 @@
 
         loadProducts();
     });
+
+    function addToCart(product) {
+        $.ajax({
+            url: "/E_Commerce_Project_New_war_exploded/cart",
+            method: "POST",
+            data: {
+
+                productName: product.name,
+                p_description: product.description,
+                productPrice: product.price,
+                quantity: product.quantity,
+            },
+            success: function (response) {
+                if (response.status === "success") {
+                    alert(response.message);
+                } else {
+                    alert("Error: " + response.message);
+                }
+            },
+            error: function () {
+                alert("An error occurred while adding the product to the cart.");
+            },
+        });
+    }
+
 
 
 

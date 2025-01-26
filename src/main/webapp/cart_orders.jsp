@@ -133,21 +133,21 @@
             <div class="home-message" >
 
                 <section class="section gb" id="new-arrivals" style="padding: 10px;backface-visibility: hidden;
-                overflow-x: hidden; margin-top: 80px;height: 350px; background-color: dimgrey;border-radius: 10px" >
+                overflow-x: hidden; margin-top: 80px;height: 350px;border-radius: 10px;color:black;border: 2px solid #ccc" >
 
                     <div class="container mt-5">
 
                     <table class="table table-bordered">
                         <thead>
-                        <tr>
-                            <th class=" text-light">Product Name</th>
-                            <th class=" text-light">Product Description</th>
-                            <th class=" text-light">Quantity</th>
-                            <th class=" text-light">Total Price </th>
-                            <th class=" text-light">Actions</th>
+                        <tr style="background-color:teal">
+                            <th style="color: black" class=" text-light">Product Name</th>
+                            <th style="color: black" class=" text-light">Product Description</th>
+                            <th style="color: black" class=" text-light">Quantity</th>
+                            <th style="color: black" class=" text-light">Total Price </th>
+                            <th style="color: black" class=" text-light">Actions</th>
                         </tr>
                         </thead>
-                        <tbody id="customer_table_body">
+                        <tbody id="customer_table_body" style="color: black">
                         </tbody>
                     </table>
                     </div>
@@ -172,5 +172,58 @@
 <script src="js/carousel.js"></script>
 <script src="js/animate.js"></script>
 <script src="js/custom.js"></script>
+
+<script>
+    function fetchCart() {
+        $.ajax({
+            url: "cart",
+            method: "GET",
+            success: function (response) {
+                console.log("Response received:", response);
+                const cart = typeof response === "string" ? JSON.parse(response) : response;
+                const tableBody = document.getElementById("customer_table_body");
+
+                tableBody.innerHTML = "";
+
+                cart.forEach(function (cart) {
+                    const newRow = tableBody.insertRow();
+
+                    newRow.insertCell(0).textContent = cart.product_name;
+                    newRow.insertCell(1).textContent = cart.p_description;
+                    newRow.insertCell(2).textContent = cart.quantity;
+                    newRow.insertCell(3).textContent = cart.t_price;
+
+                    const actionCell = newRow.insertCell(4);
+                    const editIcon = document.createElement("i");
+                    editIcon.className = "fas fa-pencil-alt";
+                    editIcon.style.color = "teal";
+                    editIcon.style.cursor = "pointer";
+                    editIcon.addEventListener("click", () => alert(`Edit: ${cart.productName}`));
+                    actionCell.appendChild(editIcon);
+
+                    const deleteIcon = document.createElement("i");
+                    deleteIcon.className = "fas fa-trash-alt";
+                    deleteIcon.style.color = "red";
+                    deleteIcon.style.cursor = "pointer";
+                    deleteIcon.title = "Delete User";
+                    deleteIcon.addEventListener("click", () => {
+                        if (confirm(`Are you sure you want to delete admin: ${cart.productName}?`)) {
+                            deleteAdmin(cart.productName);
+
+                        }
+                    });
+                    actionCell.appendChild(editIcon);
+                    actionCell.appendChild(document.createTextNode(" "));
+                    actionCell.appendChild(deleteIcon);
+                });
+
+            },
+            error: function (xhr, status, error) {
+                console.error("Error in AJAX request:", status, error, xhr.responseText);
+            }
+        });
+    }
+    fetchCart();
+</script>
 </body>
 </html>

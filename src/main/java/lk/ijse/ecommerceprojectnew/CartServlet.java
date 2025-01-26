@@ -71,8 +71,16 @@ public class CartServlet extends HttpServlet {
             preparedStatement.setString(4, req.getParameter("t_price"));
             preparedStatement.executeUpdate();
 
+            int count = preparedStatement.executeUpdate();
+            if (count > 0) {
+                resp.sendRedirect("a_products.jsp");
+            }else {
+                resp.sendRedirect("a_products.jsp");
+            }
+
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            resp.sendRedirect("a_products.jsp?error=Failed"+e.getMessage());
+            e.printStackTrace();
         }
 
 
